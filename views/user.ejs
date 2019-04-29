@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>connectMe</title>
+        <link rel="stylesheet" href="../../css/style.css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        
+        
+    </head>
+    <body>
+
+    <header class="header-position">
+            <div class="container">
+                <div class="brandname">
+                    <h1>connect<span class="brandname-span">Me</span></h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li class="active"><a href="/index">Hi <%= user.name%></a></li>
+                        <li><a href="/logout">Logout</a></li>
+                        <li><a href="/posts">Back to posts</a></li>
+                    </ul>
+                </nav>
+            </div>
+    </header>
+
+
+<section id="main-user">
+    <div class="container">
+            <h1>Posts by - <%= user.name%></h1>
+            <div class="timeline">              
+                    <% allPosts.forEach(function(post){ %>
+                        <div class="post-box">
+                            <h4>Title: <span class="brandname-span"><%= post.title%></span></h4>
+                            By <%= post.name%> on <%= post.date.toDateString() %>
+                            <p><%= post.body%></p>
+                            <a href="/posts/<%=post._id %>">... View post</a>
+                        </div>
+                    <% }) %>
+                </div>
+    </div>
+</section>
+
+<footer>
+        <div class="container">
+            <p>connect<span class="brandname-span">Me</span> Designs, copyright &copy; 2018</p>
+        </div>
+    </footer>
+    <script src="../../js/main.js"></script>
+    </body>
+</html>

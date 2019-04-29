@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>connectMe</title>
+        <link rel="stylesheet" href="../css/style.css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        
+        
+    </head>
+    <body>
+
+
+<header class="header-position">
+
+        <div class="container">
+            <div class="brandname">
+                <h1>connect<span class="brandname-span">Me</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active"><a href="/index">Hi <%= user%></a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+ 
+    <section id="main-post">
+            <div class="container">
+                        <form class="post-form" action="" method="">
+        
+                                <div class="post-form-field">
+                                    <input id="create-post" type="text" name="post[title]" placeholder="What's On Your Mind, <%= user.split(" ")[0]%>"  required>
+                                </div>
+                        </form>
+
+                        <!--Modal-->
+                        <div class="modal">
+                            <section class="modal-content">
+                              <span class="modal-close">&times;</span>
+                              <form class="post-form" action="/newPost" method="post">
+        
+                                <div class="post-form-field">
+                                    <input type="text" name="post[title]" placeholder="Give your thought a title" required>
+                                </div>
+                                <div class="post-form-field">
+                                    <textarea name="post[body]" placeholder="Share your thoughts" cols="30" rows="5" required></textarea>
+                                </div>
+                                    <input type="submit" value="Post" class="button post-button">
+                                </form>
+                            </section>
+                        </div>
+                
+
+                <div class="timeline">
+                    <% allPosts.forEach(function(post){ %>
+                        <div class="post-box">
+                            <h4>Title: <span class="brandname-span"><%= post.title%></span></h4>
+                            By <a href="/posts/<%=post._id %>/<%=post.name%>"><%= post.name%></a> on <%= post.date.toDateString() %>
+                            <p><%= post.body%></p>
+                            <a href="/posts/<%=post._id %>">... View post</a>
+
+                            <!--working on post like-->
+                            <button class="edit like" onclick="actOnPost(event);"
+                            data-post-id="<%=post._id %>">Like
+                    </button>
+                    <span id="likes-count-<%=post._id %>"><%=post.likes_count %></span>
+
+                        </div>
+                    <% }) %>
+                </div>
+            </div>
+
+            
+        </section>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://js.pusher.com/4.1/pusher.min.js"></script>
+        <script src="/js/pusher.js"></script>
+        <script>
+            var updatePostStats = {
+                Like: function (postId) {
+                    document.querySelector('#likes-count-' + postId).textContent++;
+                },
+                Unlike: function(postId) {
+                    document.querySelector('#likes-count-' + postId).textContent--;
+                }
+            };
+    
+            var toggleButtonText = {
+                Like: function(button) {
+                    button.textContent = "Unlike";
+                },
+                Unlike: function(button) {
+                    button.textContent = "Like";
+                }
+            };
+    
+            var actOnPost = function (event) {
+                var postId = event.target.dataset.postId;
+                var action = event.target.textContent.trim();
+                toggleButtonText[action](event.target);
+                updatePostStats[action](postId);
+                axios.post('/posts/' + postId + '/act', { action: action });
+            };
+        </script>
+
+<% include partials/footer %>
