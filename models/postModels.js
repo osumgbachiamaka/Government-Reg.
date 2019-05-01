@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var postSchema = new mongoose.Schema({
+var RegistGovernSchema = new mongoose.Schema({
     title: String,
     body: String,
     name: String,
@@ -9,4 +9,4 @@ var postSchema = new mongoose.Schema({
     date: {type: Date, default: Date.now}
 })
 
-module.exports = mongoose.model("Post", postSchema);
+module.exports = mongoose.model("RegistGov", RegistGovernSchema);

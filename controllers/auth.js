@@ -9,7 +9,7 @@ var express =   require('express')
 router.get('/login', function(req, res){
     res.render('login');
 })
-router.get('/register', function(req, res){
+router.get('/ra', function(req, res){
     res.render('register');
 })
 router.get('/logout', function(req, res){
