@@ -10,6 +10,9 @@ router.get('/', function(req, res){
 router.get('/index', function(req, res){
     res.redirect('/');
 })
+router.get('/application', function(req, res){
+    res.render('application')
+})
 
 function isLoggedIn(req, res, next){
     if(req.isAuthenticated()){
@@ -131,6 +134,31 @@ router.post('/newPost', isLoggedIn, function(req, res){
         
         
     })
+})
+
+//Registration
+router.post('/registrationGovern', function(req, res){
+    var user = req.body,
+        name = 'name',
+        email = 'email';
+        console.log(user.govern);
+        console.log(user.Eng);
+        console.log(user.business);
+        console.log(user.teacher);
+        console.log(user.elders);
+        console.log(user.medicine);
+
+    // var data = req.body.post;
+    // data[name] = user.name;
+    // data[email] = user.username;
+    // data[likes_count] = 0;
+    // Post.create(data, function(err, postCreated){
+    //     if(err){
+    //         console.log('An error occured '+ err);
+    //         return;
+    //     }
+    //     res.redirect('posts');
+    // })
 })
 
 //configuring pusher
