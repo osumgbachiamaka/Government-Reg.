@@ -8,85 +8,64 @@
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            <link rel="stylesheet" href="../css/bootstrap.min.css">
+            <link rel="stylesheet" href="../css/form.css">
     </head>
     <body>
-        <div class="container">
-            <h1>Ebonyi State Stimulus Development Project</h1>
+        <div class=container-fluid>
+            <div class="biggest ml-auto mr-auto my-4">
+            <div class="title text-center">
+                <h1>Ebonyi State Stimulus Development Project</h1>
+            </div>
             <form class="needs-validation" action="registrationGovern" method="POST" novalidate>
             <!-- <form class="needs-validation" action="registrationGovern" method="POST" novalidate> -->
                 <div class="form-row">
-                    <div class="col-md-4 mb-3">
+                    <div class="col-md-6">
                     <label for="validationCustom01">First name</label>
-                    <input type="text" class="form-control" name="govern[firstname]" id="validationCustom01" placeholder="First name" required>
+                    <input type="text" class="ntrol form-control" name="govern[firstname]" id="validationCustom01" placeholder="First name" required>
                     <div class="valid-feedback">
                         Looks good!
                     </div>
                     </div>
-                    <div class="col-md-4 mb-3">
+                    <div class="col-md-6">
                     <label for="validationCustom02">Middle name</label>
                     <input type="text" class="form-control" name="govern[middlename]" id="validationCustom02" placeholder="Last name" required>
                     <div class="valid-feedback">
                         Looks good!
                     </div>
                     </div>
-                    <div class="col-md-4 mb-3">
+                  
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6">
                         <label for="validationCustom02">Last name</label>
                         <input type="text" class="form-control" name="govern[lastname]" id="validationCustom02" placeholder="Last name" value="Otto" required>
                         <div class="valid-feedback">
                             Looks good!
                         </div>
                     </div>
-                    <!-- <div class="col-md-4 mb-3">
-                    <label for="validationCustomUsername">Username</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        </div>
-                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
-                        <div class="invalid-feedback">
-                        Please choose a username.
-                        </div>
-                    </div>
-                    </div> -->
-                </div>
-                <div class="form-row">
-                    <div class="col-md-6 mb-3">
+                    <div class="col-md-6">
                         <label for="validationCustom03">Date of Birth</label>
                         <input type="date" class="form-control" name="govern[dateofBirth]" id="validationCustom03" placeholder="City" required>
                         <div class="invalid-feedback">
                             Please provide a valid date.
                         </div>
                     </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="validationCustom05">Sex</label>
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio1" name="govern[sex]" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadio1">Female</label>
-                        </div>
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio2" name="govern[sex]" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadio2">Male</label>
-                        </div>
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio3" name="govern[sex]" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadio3">Prefer not to say</label>
-                        </div>
-                    </div>
                 </div>
                 <div class="form-row">
-                    <div class="col-md-4 mb-3">
-                        <label for="validationCustom05">Marital Status</label>
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="maritalStatus1" name="govern[maritalStatus]" class="custom-control-input">
-                            <label class="custom-control-label" for="maritalStatus1">Single</label>
-                        </div>
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="maritalStatus2" name="govern[maritalStatus]" class="custom-control-input">
-                            <label class="custom-control-label" for="maritalStatus2">Married</label>
-                        </div>
-                    </div>
                     <div class="col-md-6 mb-3">
+                        <label for="validationCustomUsername">Email</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                </div>
+                                <input type="email" class="form-control" name="govern[email]" id="validationCustomUsername" placeholder="Email" aria-describedby="inputGroupPrepend" required>
+                                <div class="invalid-feedback">
+                                Invalid email.
+                                </div>
+                            </div>
+                        </div>
+                    <div class="col-md-6">
                         <label for="validationCustom04">Age</label>
                         <input type="text" class="form-control" name="govern[age]" id="validationCustom04" placeholder="Age" required>
                         <div class="invalid-feedback">
@@ -96,15 +75,10 @@
                 </div>
                 <div class="form-row">
                     <div class="col-md-6 mb-3">
-                        <label for="validationCustomUsername">Email</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroupPrepend">@</span>
-                            </div>
-                            <input type="email" class="form-control" name="govern[email]" id="validationCustomUsername" placeholder="Email" aria-describedby="inputGroupPrepend" required>
+                        <label for="validationCustom03">Village</label>
+                        <input type="text" class="form-control" name="govern[village]" id="validationCustom03" placeholder="Village" required>
                             <div class="invalid-feedback">
-                            Invalid email.
-                            </div>
+                                Village can't be left empty
                         </div>
                     </div>
                     <div class="col-md-6 mb-3">
@@ -116,13 +90,7 @@
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="col-md-6 mb-3">
-                        <label for="validationCustom03">Village</label>
-                        <input type="text" class="form-control" name="govern[village]" id="validationCustom03" placeholder="Village" required>
-                        <div class="invalid-feedback">
-                            Village can't be left empty
-                        </div>
-                    </div>
+                    
                     <div class="col-md-6 mb-3">
                         <label for="validationCustom03">Autonomous Community</label>
                         <input type="text" class="form-control" name="govern[community]" id="validationCustom03" placeholder="Autonomous Community" required>
@@ -137,25 +105,53 @@
                             L.G.A can't be left empty
                         </div>
                     </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="validationCustom03">State</label>
-                        <input type="text" class="form-control" name="govern[state]" id="validationCustom03" placeholder="State" required>
-                        <div class="invalid-feedback">
-                            State can't be left empty
-                        </div>
-                    </div>
                 </div>
                 <div class="form-row">
                     <div class="col-md-6 mb-3">
+                        <label for="validationCustom03">State</label>
+                            <input type="text" class="form-control" name="govern[state]" id="validationCustom03" placeholder="State" required>
+                            <div class="invalid-feedback">
+                                State can't be left empty
+                            </div>
+                        </div>
+                    <div class="col-md-6 mb-3">
                         <label>Upload C.V</label>
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input" name="govern[cv]" id="validatedCustomFile" required>
+                            <input type="file" style"background-radius:none;" class="form-control custom-file-input" name="govern[cv]" id="validatedCustomFile" required>
                             <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
                             <div class="invalid-feedback">Example invalid custom file feedback</div>
                         </div>
                     </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="validationCustom05">Categories</label>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                       <label for="validationCustom05">Sex</label>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio1" name="govern[sex]" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio1">Female</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio2" name="govern[sex]" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio2">Male</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio3" name="govern[sex]" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio3">Prefer not to say</label>
+                        </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom05">Marital Status</label>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="maritalStatus1" name="govern[maritalStatus]" class="custom-control-input">
+                        <label class="custom-control-label" for="maritalStatus1">Single</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="maritalStatus2" name="govern[maritalStatus]" class="custom-control-input">
+                        <label class="custom-control-label" for="maritalStatus2">Married</label>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom05">Categories</label>
                         <div class="custom-control custom-radio">
                             <input type="radio" id="categories1" name="govern[categories]" class="custom-control-input">
                             <label class="custom-control-label" for="categories1">Elders seeking for business opportunities</label>
@@ -182,31 +178,27 @@
                         </div>
                     </div>
                 </div>
-
+            </div>     
                 <!--Engineers/Technologists-->
-                <h1>Engineers/Technologists</h1>
+            <div class="biggest ml-auto mr-auto my-4">
+                <div class="text-center">
+                    <h1>Engineers/Technologists</h1>
+                </div>
             <form class="needs-validation" novalidate>
                 <div class="form-row">
-                    <div class="col-md-4 mb-3">
+                    <div class="col-md-6 mb-3">
                     <label for="validationCustom01">Secondary School</label>
                     <input type="text" class="form-control" name="Eng[School]" id="validationCustom01" placeholder="Secondary School" value="Mark" required>
                     <div class="valid-feedback">
                         Looks good!
                     </div>
                     </div>
-                    <div class="col-md-4 mb-3">
+                    <div class="col-md-6 mb-3">
                     <label for="validationCustom02">Higher Education</label>
                     <input type="text" class="form-control" name="Eng[HigherE]" id="validationCustom02" placeholder="Higher Education" value="Otto" required>
                     <div class="valid-feedback">
                         Looks good!
                     </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="validationCustom02">Name of School</label>
-                        <input type="text" class="form-control" name="Eng[School]" id="validationCustom02" placeholder="Name of School" value="Otto" required>
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
                     </div>
                 </div>
                 <div class="form-row">
@@ -240,33 +232,49 @@
                     </div>
                 </div>
                 <div class="form-row">
+                    <div class="col-md-4 mb-6">
+                            <div class="form-group">
+                                <label>Degree Obtained</label>
+                                <select class="form-control">
+                                    <option>OND</option>
+                                    <option>HND</option>
+                                    <option>BSc/BEd</option>
+                                    <option>MSc</option>
+                                    <option>PhD</option>
+                                </select>
+                            </div>
+                                
+                    </div> 
+                    <!-- <label for="exampleFormControlSelect1" name="Eng[degreeObtained]">Degree Obtained</label> -->
                     <div class="col-md-4 mb-3">
-                        <label for="validationCustom03">Degree Obtained</label>
-                        <input type="text" class="form-control" name="Eng[degreeObtained]" id="validationCustom03" placeholder="Degree Obtained" required>
-                        <div class="invalid-feedback">
-                            Village can't be left empty
+                        <label for="validationCustom02">Name of School</label>
+                        <input type="text" class="form-control" name="Eng[School]" id="validationCustom02" placeholder="Name of School" value="Otto" required>
+                        <div class="valid-feedback">
+                        Looks good!
                         </div>
                     </div>
                     <div class="col-md-4 mb-3">
+                            <label for="validationCustom03">Name of Certification Received, if any?</label>
+                            <input type="text" class="form-control" name="Eng[certReceived]" id="validationCustom03" placeholder="Name of Certification Received, if any?" required>
+                            <div class="invalid-feedback">
+                                State can't be left empty
+                            </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-6">
                         <label for="validationCustom03">Professional certification, if any?</label>
                         <input type="text" class="form-control" name="Eng[professionalCert]" id="validationCustom03" placeholder="Professional certification, if any?" required>
                         <div class="invalid-feedback">
                             Autonomous Community can't be left empty
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3">
+                    <div class="col-md-6 mb-3">
                         <label for="validationCustom03">School/Program</label>
                         <input type="text" class="form-control" name="Eng[Schoolprogram]" id="validationCustom03" placeholder="School/Program" required>
                         <div class="invalid-feedback">
-                            L.G.A can't be left empty
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="validationCustom03">Name of Certification Received, if any?</label>
-                        <input type="text" class="form-control" name="Eng[certReceived]" id="validationCustom03" placeholder="Name of Certification Received, if any?" required>
-                        <div class="invalid-feedback">
-                            State can't be left empty
-                        </div>
+                             L.G.A can't be left empty
+                       </div>
                     </div>
                 </div>
                 <h4>Work experience</h4>
@@ -327,25 +335,22 @@
                 </div>
                 <div class="form-row">
                     <div class="col-md-12 mb-3">
-                        <label for="validationCustom03">In all your work experience; describe a unique achievement or unique role played. (Give details on each of such achievements)</label>
-                        <input type="text" class="form-control" name="Eng[uniqueAchievements]" id="validationCustom03" placeholder="Describe your achievements" required>
-                        <div class="invalid-feedback">
-                            Village can't be left empty
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">In all your work experience; describe a unique achievement or unique role played. (Give details on each of such achievements)</label>
+                                <textarea class="form-control" name="Eng[uniqueAchievements]" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
                     </div>
                 </div>
-                <h3>Stimulus Questions</h3>
+                <h4>Stimulus Questions</h4>
                 <div class="form-row">
-                    <div class="col-md-12 mb-3">
+                    <div class="col-md-6 mb-3">
                         <label for="validationCustom03">What are you doing currently and for how long?</label>
                         <input type="text" class="form-control" name="Eng[currentlyDoing]" id="validationCustom03" placeholder="What are you doing currently and for how long?" required>
                         <div class="invalid-feedback">
                             Village can't be left empty
                         </div>
                     </div>
-                </div>
-                <div class="form-row">
-                    <div class="col-md-12 mb-3">
+                    <div class="col-md-6 mb-3">
                         <label for="validationCustom03">What type of assistance would you require? (give detail)</label>
                         <input type="text" class="form-control" name="Eng[assistanceNeeded]" id="validationCustom03" placeholder="What type of assistance would you require? (give detail)" required>
                         <div class="invalid-feedback">
@@ -362,9 +367,7 @@
                             <div class="invalid-feedback">Example invalid custom file feedback</div>
                         </div>
                     </div>
-                </div>
-                <div class="form-row">
-                    <div class="col-md-12 mb-3">
+                    <div class="col-md-6 mb-3">
                         <label for="validationCustom03">What would you like to achieve through this stimulus project</label>
                         <input type="text" class="form-control" name="Eng[yourAchievement]" id="validationCustom03" placeholder="What would you like to achieve through this stimulus project" required>
                         <div class="invalid-feedback">
@@ -372,33 +375,40 @@
                         </div>
                     </div>
                 </div>
-                <h5>Referral Data</h5>
+        
+                <h4>Referral Data</h4>
                 <div class="form-row">
-                    <div class="col-md-4 mb-3">
+                    <div class="col-md-6 mb-3">
                         <label for="validationCustom03">Name of referral</label>
                         <input type="text" class="form-control" name="Eng[referralName]" id="validationCustom03" placeholder="Name of referral" required>
                         <div class="invalid-feedback">
                             Village can't be left empty
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3">
+                    <div class="col-md-6 mb-3">
                         <label for="validationCustom03">Referral phone number</label>
                         <input type="text" class="form-control" name="Eng[referralPhone]" id="validationCustom03" placeholder="Referral phone number" required>
                         <div class="invalid-feedback">
                             Autonomous Community can't be left empty
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3">
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
                         <label for="validationCustom03">Relationship with Referrer</label>
                         <input type="text" class="form-control" name="Eng[referralRelationship]" id="validationCustom03" placeholder="Relationship with Referrer" required>
-                        <div class="invalid-feedback">
-                            Autonomous Community can't be left empty
-                        </div>
+                            <div class="invalid-feedback">
+                                Autonomous Community can't be left empty
                     </div>
                 </div>
-
+            </div>
+        </div>
                 <!-- Business Interest-->
-                <h3>Business Interest</h3>
+        <div class="biggest ml-auto mr-auto my-4">
+                <div>
+                    <h3>Business Interest</h3>
+                </div>
+               
                 <div class="form-row">
                         <div class="col-md-6 mb-3">
                         <label for="validationCustom05">Select Business Interest</label>
@@ -523,8 +533,12 @@
                         </div>
                     </div>
                 </div>
+            </div>
                 <!--Teachers-->
-                <h3>Teachers</h3>
+                <div class="biggest ml-auto mr-auto my-4">
+                    <div>
+                        <h3>Teachers</h3>
+                    </div>
                 <div class="form-row">
                     <div class="col-md-3 mb-3">
                     <label for="validationCustom05">Area of interest?</label>
@@ -611,8 +625,12 @@
                         </div>
                     </div>
                 </div> 
+            </div>
                 <!--Elders seeking for business opportunities-->
+                <div class="biggest ml-auto mr-auto my-4">
+            <div>
                 <h3>Elders seeking for business opportunities</h3>
+            </div>
                 <div class="form-row">
                 <div class="col-md-3 mb-3">
                     <label for="validationCustom03">What is the business of interest</label>
@@ -749,8 +767,13 @@
                     </div>
                 </div>
             </div>
+        </div>
             <!--Medicine-->
-            <h3>Medicine</h3>
+            <div class="biggest ml-auto mr-auto my-4">
+            <div>
+                <h3>Medicine</h3>
+            </div>
+            
             <div class="form-row">
                 <div class="col-md-3 mb-3">
                     <label for="validationCustom03">School Attended</label>
@@ -825,8 +848,12 @@
                     </div>
                 </div>
             </div>
+        </div>
             <!--Traders-->
-            <h3>Traders</h3>
+            <div class="biggest ml-auto mr-auto my-4">
+            <div>
+                <h3>Traders</h3>
+            </div>
             <span><strong>(Note applicants must be doing sales of over Ten Million Naira yearly (₦10,000,000).</strong></span>
             <div class="form-row">
                 <div class="col-md-4 mb-3">
@@ -979,7 +1006,8 @@
                     </div>
                     </div>
                 </div>
-                <button class="btn btn-primary" type="submit">Submit form</button>
+                <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
             </form>
         </div>
         

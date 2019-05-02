@@ -1,0 +1,24 @@
+body{
+    background-color:#e2e1e0;
+}
+.biggest{
+    width:60%;
+    background-color:#fff;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    padding:50px;
+}
+.form-control{
+    border-radius:0rem!important;
+    /* padding:30px; */
+    height:3em;
+}
+.title{
+    margin-bottom:30px;
+}
+label{
+    color:#585656;
+    font-size:12px;
+    text-transform:uppercase;
+}
+
+/* biggest ml-auto mr-auto my-4 */
