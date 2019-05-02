@@ -1,6 +1,8 @@
 var express =   require('express')
     router =    express.Router(),
     Post =      require('../models/postModels'),
+    formidable = require('formidable'),
+    fs = require('fs'),
     Pusher = require('pusher');
 
 //========other routes======//
@@ -12,6 +14,9 @@ router.get('/index', function(req, res){
 })
 router.get('/application', function(req, res){
     res.render('application')
+})
+router.get('/testing', function(req, res){
+    res.render('testi');
 })
 
 function isLoggedIn(req, res, next){
@@ -136,6 +141,22 @@ router.post('/newPost', isLoggedIn, function(req, res){
     })
 })
 
+
+//upload
+router.post('/upload', function(req, res){
+    var form = new formidable.IncomingForm();
+    form.parse(req, function (err, fields, files) {
+        var oldpath = files.fileupload.path;
+        console.log(oldpath)
+        var newpath = 'public/uploads' + files.fileupload.name;
+        console.log(newpath)
+        fs.rename(oldpath, newpath, function (err) {
+          if (err) throw err;
+          res.write('File uploaded and moved!');
+          res.end();
+        });
+    });
+})
 //Registration
 router.post('/registrationGovern', function(req, res){
     var formApp = req.body.govern;
@@ -234,6 +255,7 @@ router.post('/registrationGovern', function(req, res){
     }
     else if(formApp.categories == 'Medicine'){
         var medicine = req.body.medicine;
+        console.log(formApp.middlename)
             formApp['fullname'] = formApp.firstname + ' ' + formApp.middlename + ' ' + formApp.lastname;
             formApp['SchoolAt'] = medicine.SchoolAt;
             formApp['schlAttended'] = medicine.schlAttended;
