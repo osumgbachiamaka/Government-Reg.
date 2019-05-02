@@ -11,6 +11,7 @@ var PORT =  process.env.PORT || 3000,
     auth =                  require('./controllers/auth'),
     User =                  require('./models/userModels.')
 
+
     mongoose.set('useCreateIndex', true);
 //     mongoose.connect("mongodb://localhost/government", { useNewUrlParser:true }, function(err){
 //         if(err){
