@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Admin Dasboard</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="css/_all-skins.min.css">
+  <link rel="stylesheet" href="css/sidebar.less" >
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="admin" class="logo">
+      Admin Dasboard
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <h5> Welcome <%= user.name %></h5>
+    </nav>
+  </header>
+  <% include sidebar %>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      Dashboard
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Review <%= allApp.fullname%> Application</h3>
+
+              <div class="box-tools">
+                <div class="input-group input-group-sm" style="width: 150px;">
+                  <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
+
+                  <div class="input-group-btn">
+                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid">
+            <div class="form-row">
+                <div class="col-md-4">
+                <label for="validationCustom01">Full Name</label>
+                <input type="text" class="ntrol form-control" value="<%= allApp.fullname%>" id="validationCustom01"  readonly>
+                </div>
+              
+            </div>
+            <div class="form-row">
+                <div class="col-md-4">
+                    <label for="validationCustom03">Date of Birth</label>
+                    <input type="date" class="form-control" value="<%= allApp.dateofBirth%>" id="validationCustom03"  readonly>
+                </div>
+                <div class="col-md-4">
+                    <label for="validationCustomUsername">Email</label>
+                        <input type="email" class="form-control" value="<%= allApp.dateofBirth%>" id="validationCustomUsername" readonly>
+                </div>
+                <div class="col-md-4">
+                    <label for="validationCustom04">Age</label>
+                    <input type="text" class="form-control" value="<%= allApp.age%>" id="validationCustom04" readonly>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom03">Phone</label>
+                    <input type="number" class="form-control" value="<%= allApp.phone%>" id="validationCustom03" readonly>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom03">Village</label>
+                    <input type="text" class="form-control" value="<%= allApp.village%>" id="validationCustom03" readonly>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom03">Autonomous Community</label>
+                    <input type="text" class="form-control" value="<%= allApp.community%>" id="validationCustom03" readonly>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom03">L.G.A</label>
+                    <input type="text" class="form-control" value="<%= allApp.lga%>" id="validationCustom03" readonly>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom03">State</label>
+                    <input type="text" class="form-control" value="<%= allApp.state%>" id="validationCustom03" readonly>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>C.V</label>
+                    <div class="custom-file">
+                        <input type="text" style="background-radius:none;" class="form-control custom-file-input" value="<%= allApp.cv%>" id="validatedCustomFile" readonly >
+                        <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                   <label for="validationCustom05">Sex</label>
+                    <input type="text" class="form-control" value="<%= allApp.sex%>" readonly />
+                    </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom05">Marital Status</label>
+                     <input type="text" class="form-control" value="<%= allApp.maritalStatus%>" readonly />
+                     </div>
+                 <div class="col-md-4 mb-3">
+                    <label for="validationCustom05">Categories</label>
+                     <input type="text" class="form-control" value="<%= allApp.categories%>" readonly />
+                     </div>
+            </div>
+            <!--Categories Section-->
+            <h3><%= allApp.categories%></h3>
+            <% if(allApp.categories == 'Elders seeking for business opportunities'){%>
+                <div class="form-row">
+                    <div class="col-md-4">
+                        <label for="validationCustom03">What is the business of interest</label>
+                        <input type="date" class="form-control" value="<%= allApp.businessIntrst%>" id="validationCustom03" readonly>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationCustomUsername">If you have been in business, for how long and what is the business</label>
+                            <input type="email" class="form-control" value="<%= allApp.businessHwLng%>" id="validationCustomUsername" id="validationCustomUsername" readonly>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationCustom04">Prior to business of interest were you a civil servant?</label>
+                        <input type="text" class="form-control" value="<%= allApp.civilServant%>" id="validationCustom04" readonly>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">Prior to business of interest where did you work?</label>
+                        <input type="number" class="form-control" value="<%= allApp.formerWork%>" id="validationCustom03" readonly>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">Are you in business as a part time or full time?</label>
+                        <input type="text" class="form-control" value="<%= allApp.businessLng%>" id="validationCustom03" readonly>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">If you are already in business, how long?</label>
+                        <input type="text" class="form-control" value="<%= allApp.businessNature%>" id="validationCustom03" readonly>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">How many members of your family have worked with you in the business</label>
+                        <input type="text" class="form-control" value="<%= allApp.fmlyMembers%>" id="validationCustom03" readonly>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">Will you love to expand your business and why?</label>
+                        <input type="text" class="form-control" value="<%= allApp.expandBusiness%>" id="validationCustom03" readonly>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">Will you like to attract more capital and why?</label>
+                        <input type="text" class="form-control" value="<%= allApp.attractCapital%>" id="validationCustom03" readonly>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">Have you mentored any one in business or in leadership before?</label>
+                        <input type="text" class="form-control" value="<%= allApp.details%>" id="validationCustom03" readonly>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">If you have, can you provide us their name, phone number and remark of your experience with them</label>
+                        <input type="text" class="form-control" value="<%= allApp.details%>" id="validationCustom03" readonly>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">What is your responsibility to the state as an elder?</label>
+                        <input type="text" class="form-control" value="<%= allApp.respStateElder%>" id="validationCustom03" readonly>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">What is your responsibility to the community as an elder?</label>
+                        <input type="text" class="form-control" value="<%= allApp.respCommElder%>" id="validationCustom03" readonly>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">Where are you presently resident?</label>
+                        <input type="text" class="form-control" value="<%= allApp.presentResident%>" id="validationCustom03" readonly>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">What is your area of interest as it relate to Ebonyi State Stimulus Development Projects</label>
+                        <input type="text" class="form-control" value="<%= allApp.areaIntEbnyi%>" id="validationCustom03" readonly>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom03">What type of assistance would you require and how can we help you?</label>
+                        <input type="text" class="form-control" value="<%= allApp.AssistanceRq%>" id="validationCustom03" readonly>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <a href><td><button class="btn btn-primary">Approve Application</button></td></a>
+                        <a href><td><button class="btn btn-danger">Decline Application</button></td></a>
+                    </div>
+                </div>
+    
+            <%} else if(allApp.categories == 'Teachers'){%>
+                <div class="form-row">
+                    <div class="col-md-4">
+                        <label for="validationCustom03">Area of interest?</label>
+                        <input type="date" class="form-control" value="<%= allApp.areaofInterest%>" id="validationCustom03" readonly>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationCustomUsername">School Attended</label>
+                            <input type="email" class="form-control" value="<%= allApp.schlAttended%>" id="validationCustomUsername" id="validationCustomUsername" readonly>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationCustom04">Class of Degree / Grade Obtained</label>
+                        <input type="text" class="form-control" value="<%= allApp.gradeObtained%>" id="validationCustom04" readonly>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">Qualification Obtained</label>
+                        <input type="number" class="form-control" value="<%= allApp.qualification%>" id="validationCustom03" readonly>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">Are you currently employed?</label>
+                        <input type="text" class="form-control" value="<%= allApp.employed%>" id="validationCustom03" readonly>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">If 'yes' to  the Question above, Who is your Employer?</label>
+                        <input type="text" class="form-control" value="<%= allApp.employer%>" id="validationCustom03" readonly>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">Years of Work Experience</label>
+                        <input type="text" class="form-control" value="<%= allApp.yrWorkExp%>" id="validationCustom03" readonly>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">Have you taught Before? If what Subject?</label>
+                        <input type="text" class="form-control" value="<%= allApp.subject%>" id="validationCustom03" readonly>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">Desire Interest in career development</label>
+                        <input type="text" class="form-control" value="<%= allApp.intrtDvpmt%>" id="validationCustom03" readonly>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">How will this project help you</label>
+                        <input type="text" class="form-control" value="<%= allApp.projectHelp%>" id="validationCustom03" readonly>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <a href><td><button class="btn btn-primary">Approve Application</button></td></a>
+                        <a href><td><button class="btn btn-danger">Decline Application</button></td></a>
+                    </div>
+                </div>
+                <%} else if(allApp.categories == 'Engineers/Technologists'){%>
+                    <div class="form-row">
+                        <div class="col-md-4">
+                            <label for="validationCustom03">Secondary School</label>
+                            <input type="date" class="form-control" value="<%= allApp.School%>" id="validationCustom03" readonly>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationCustomUsername">Name of School</label>
+                                <input type="email" class="form-control" value="<%= allApp.NameSchool%>" id="validationCustomUsername" id="validationCustomUsername" readonly>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationCustom04">Course of Study</label>
+                            <input type="text" class="form-control" value="<%= allApp.CourseStudy%>" id="validationCustom04" readonly>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom03">Grade/CGPA</label>
+                            <input type="number" class="form-control" value="<%= allApp.Grade%>" id="validationCustom03" readonly>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom03">Year admitted</label>
+                            <input type="text" class="form-control" value="<%= allApp.yearAdmitted%>" id="validationCustom03" readonly>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom03">Year graduated</label>
+                            <input type="text" class="form-control" value="<%= allApp.yearGraduated%>" id="validationCustom03" readonly>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom03">Degree Obtained</label>
+                            <input type="text" class="form-control" value="<%= allApp.degreeObtained%>" id="validationCustom03" readonly>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom03">Name of Certification Received, if any?</label>
+                            <input type="text" class="form-control" value="<%= allApp.professionalCert%>" id="validationCustom03" readonly>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom03">Professional certification, if any?</label>
+                            <input type="text" class="form-control" value="<%= allApp.certReceived%>" id="validationCustom03" readonly>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom03">School/Program</label>
+                            <input type="text" class="form-control" value="<%= allApp.projectHelp%>" id="validationCustom03" readonly>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom03">Employer</label>
+                            <input type="text" class="form-control" value="<%= allApp.employer%>" id="validationCustom03" readonly>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom03">Address of Employer</label>
+                            <input type="text" class="form-control" value="<%= allApp.addressEmployer%>" id="validationCustom03" readonly>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom03">Job Title</label>
+                            <input type="text" class="form-control" value="<%= allApp.jobTitle%>" id="validationCustom03" readonly>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom03">Name of supervisor</label>
+                            <input type="text" class="form-control" value="<%= allApp.nameSupervisor%>" id="validationCustom03" readonly>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom03">Supervisor's phone number</label>
+                            <input type="text" class="form-control" value="<%= allApp.supervisorPhone%>" id="validationCustom03" readonly>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom03">Date Started</label>
+                            <input type="text" class="form-control" value="<%= allApp.dateStarted%>" id="validationCustom03" readonly>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom03">Date Ended</label>
+                            <input type="text" class="form-control" value="<%= allApp.dateEnded%>" id="validationCustom03" readonly>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom03">In all your work experience; describe a unique achievement or unique role played. (Give details on each of such achievements)</label>
+                            <input type="text" class="form-control" value="<%= allApp.uniqueAchievements%>" id="validationCustom03" readonly>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom03">What are you doing currently and for how long?</label>
+                            <input type="text" class="form-control" value="<%= allApp.currentlyDoing%>" id="validationCustom03" readonly>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom03">What type of assistance would you require? (give detail)</label>
+                            <input type="text" class="form-control" value="<%= allApp.assistanceNeeded%>" id="validationCustom03" readonly>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom03">Do you have any business plan? if yes upload a copy</label>
+                            <input type="text" class="form-control" value="<%= allApp.businessPlan%>" id="validationCustom03" readonly>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom03">What would you like to achieve through this stimulus project</label>
+                            <input type="text" class="form-control" value="<%= allApp.yourAchievement%>" id="validationCustom03" readonly>
+                        </div>
+                    </div>
+                    <h4>Referral Data</h4>
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom03">Name of referral</label>
+                            <input type="text" class="form-control" value="<%= allApp.referralName%>" id="validationCustom03" readonly>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom03">Referral phone number</label>
+                            <input type="text" class="form-control" value="<%= allApp.referralPhone%>" id="validationCustom03" readonly>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom03">Relationship with Referrer</label>
+                            <input type="text" class="form-control" value="<%= allApp.referralRelationship%>" id="validationCustom03" readonly>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <a href><td><button class="btn btn-primary">Approve Application</button></td></a>
+                            <a href><td><button class="btn btn-danger">Decline Application</button></td></a>
+                        </div>
+                    </div>
+                    <%} else if(allApp.categories == 'Medicine'){%>
+                        <div class="form-row">
+                            <div class="col-md-4">
+                                <label for="validationCustom03">School Attended</label>
+                                <input type="date" class="form-control" value="<%= allApp.SchoolAt%>" id="validationCustom03" readonly>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustomUsername">Year of Graduation</label>
+                                    <input type="email" class="form-control" value="<%= allApp.yrGrad%>" id="validationCustomUsername" id="validationCustomUsername" readonly>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustom04">Area of Specialization</label>
+                                <input type="text" class="form-control" value="<%= allApp.AreaSpec%>" id="validationCustom04" readonly>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <label for="validationCustom03">Have you Completed Housemanship/Internship?</label>
+                                <input type="number" class="form-control" value="<%= allApp.completedInternship%>" id="validationCustom03" readonly>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="validationCustom03">Professional Work Experience</label>
+                                <input type="text" class="form-control" value="<%= allApp.ProfWrkExp%>" id="validationCustom03" readonly>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="validationCustom03">Community Outreach/Voluntary Work Experience</label>
+                                <input type="text" class="form-control" value="<%= allApp.VolWrkExp%>" id="validationCustom03" readonly>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <label for="validationCustom03">Uploaded copy of license</label>
+                                <input type="text" class="form-control" value="<%= allApp.license%>" id="validationCustom03" readonly>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="validationCustom03">What area of interest do you have?</label>
+                                <input type="text" class="form-control" value="<%= allApp.areaIntrst%>" id="validationCustom03" readonly>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="validationCustom03">How can the State Government help you achieve your interest</label>
+                                <input type="text" class="form-control" value="<%= allApp.governmentHelp%>" id="validationCustom03" readonly>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <a href><td><button class="btn btn-primary">Approve Application</button></td></a>
+                                <a href><td><button class="btn btn-danger">Decline Application</button></td></a>
+                            </div>
+                        </div>
+                        <%} else if(allApp.categories == 'Traders'){%>
+                            <div class="form-row">
+                                <div class="col-md-4">
+                                    <label for="validationCustom03">How many years have you been trading?</label>
+                                    <input type="date" class="form-control" value="<%= allApp.yrstrading%>" id="validationCustom03" readonly>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="validationCustomUsername">Did you learn this trade under any one?</label>
+                                        <input type="email" class="form-control" value="<%= allApp.learnUnderSomeone%>" id="validationCustomUsername" id="validationCustomUsername" readonly>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="validationCustom04">If Yes , for how long?</label>
+                                    <input type="text" class="form-control" value="<%= allApp.duration%>" id="validationCustom04" readonly>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-4 mb-3">
+                                    <label for="validationCustom03">Where did you learn?</label>
+                                    <input type="number" class="form-control" value="<%= allApp.learn%>" id="validationCustom03" readonly>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="validationCustom03">What line of trade are you involved in?</label>
+                                    <input type="text" class="form-control" value="<%= allApp.tradeLine%>" id="validationCustom03" readonly>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="validationCustom03">Are you importing or Exporting?</label>
+                                    <input type="text" class="form-control" value="<%= allApp.exportingImporting%>" id="validationCustom03" readonly>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-4 mb-3">
+                                    <label for="validationCustom03">If you are importing, Do you use Form M
+                                        to import or you just buy dollars?
+                                        (Answer if only you are importing)</label>
+                                    <input type="text" class="form-control" value="<%= allApp.dollarsHow%>" id="validationCustom03" readonly>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="validationCustom03">If you are exporting, How do you receive
+                                        your money after you have exported</label>
+                                    <input type="text" class="form-control" value="<%= allApp.receiveMoney%>" id="validationCustom03" readonly>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="validationCustom03">If you are not importing and not
+                                        exporting, where do you source your
+                                        goods/products?</label>
+                                    <input type="text" class="form-control" value="<%= allApp.sourceGoods%>" id="validationCustom03" readonly>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-4 mb-3">
+                                    <label for="validationCustom03">Do you have any bank /Finance Company debts?</label>
+                                    <input type="text" class="form-control" value="<%= allApp.financeDepts%>" id="validationCustom03" readonly>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="validationCustom03">If Yes , how much? If No continue with
+                                        below question</label>
+                                    <input type="text" class="form-control" value="<%= allApp.howMuch%>" id="validationCustom03" readonly>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="validationCustom03">How would you like to grow your trade?</label>
+                                    <input type="text" class="form-control" value="<%= allApp.growTrade%>" id="validationCustom03" readonly>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-4 mb-3">
+                                    <label for="validationCustom03">Do you have young people learning your trade under you?</label>
+                                    <input type="text" class="form-control" value="<%= allApp.learningTrade%>" id="validationCustom03" readonly>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="validationCustom03">If Yes, How many? Will you like to have some more young people, learning from
+                                        you?</label>
+                                    <input type="text" class="form-control" value="<%= allApp.howmanyYoungP%>" id="validationCustom03" readonly>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="validationCustom03">How would you like Ebonyi State- Stimulus Development Project (ES-SDP) to help
+                                        you?</label>
+                                    <input type="text" class="form-control" value="<%= allApp.traderEsSDP%>" id="validationCustom03" readonly>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6">
+                                    <a href><td><button class="btn btn-primary">Approve Application</button></td></a>
+                                    <a href><td><button class="btn btn-danger">Decline Application</button></td></a>
+                                </div>
+                            </div>
+                            <%} else if(allApp.categories == 'Business Interest'){%>
+                                <div class="form-row">
+                                    <div class="col-md-4">
+                                        <label for="validationCustom03">Business Interest</label>
+                                        <input type="date" class="form-control" value="<%= allApp.businessInterest%>" id="validationCustom03" readonly>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="validationCustomUsername">Qualification (Professional Only)</label>
+                                            <input type="email" class="form-control" value="<%= allApp.Qualification%>" id="validationCustomUsername" id="validationCustomUsername" readonly>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="validationCustom04">Work experience in the last five (5) years</label>
+                                        <input type="text" class="form-control" value="<%= allApp.workExper%>" id="validationCustom04" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom03">Discuss your work experience in relation to the project and major tasks executed over time</label>
+                                        <input type="number" class="form-control" value="<%= allApp.discussWorkExp%>" id="validationCustom03" readonly>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom03">Are you in business as a Part Time or Full Time</label>
+                                        <input type="text" class="form-control" value="<%= allApp.businessNature%>" id="validationCustom03" readonly>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom03">Provide specific successes and challenges</label>
+                                        <input type="text" class="form-control" value="<%= allApp.succeChall%>" id="validationCustom03" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom03">How many people were involved in each of the projects stated above?</label>
+                                        <input type="text" class="form-control" value="<%= allApp.peopleProject%>" id="validationCustom03" readonly>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom03">Have you mentored any one in business or in leadership before?</label>
+                                        <input type="text" class="form-control" value="<%= allApp.mentored%>" id="validationCustom03" readonly>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom03">If you have, can you provide us their name, phone number and show remark of your experience with them</label>
+                                        <input type="text" class="form-control" value="<%= allApp.remarkproject%>" id="validationCustom03" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom03">What entrepreneurial interest do you have or desire?</label>
+                                        <input type="text" class="form-control" value="<%= allApp.entInterest%>" id="validationCustom03" readonly>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom03">How will you want this project (EB-SDP) to help you achieve those entrepreneurial desires?</label>
+                                        <input type="text" class="form-control" value="<%= allApp.businessEBSDP%>" id="validationCustom03" readonly>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom03">Where are you presently resident</label>
+                                        <input type="text" class="form-control" value="<%= allApp.presResident%>" id="validationCustom03" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6">
+                                        <a href><td><button class="btn btn-primary">Approve Application</button></td></a>
+                                        <a href><td><button class="btn btn-danger">Decline Application</button></td></a>
+                                    </div>
+                                </div>
+                                <%} %>
+                        
+                    
+
+          </div>
+          <!-- /.box -->
+        </div>
+      </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+<script src="js/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="js/adminlte.min.js"></script>
+</body>
+</html>

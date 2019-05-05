@@ -1,4 +1,21 @@
-<form action="upload" method="Post">
-    <input type="file" name="fileupload" >
-    <input type="submit" value="Sumbit">
-</form>
+<html>
+  <body>
+    <form ref='uploadForm' 
+      id='uploadForm' 
+      action='http://localhost:3000/upload' 
+      method='post' 
+      enctype="multipart/form-data">
+        <input type="file" name="sampleFile" />
+        <input type='submit' value='Upload!' />
+    </form>   
+    
+    <form ref='uploadForm' 
+      id='uploadForm' 
+      action='uploadmutter' 
+      method='post' 
+      enctype="multipart/form-data">
+        <input type="file" name="sampleFile" />
+        <input type='submit' value='Upload!' />
+    </form> 
+  </body>
+</html>
