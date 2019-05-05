@@ -43,7 +43,6 @@ var RegistGovernSchema = new mongoose.Schema({
     projectHelp: String,
 
     School: String,
-    HigherE: String,
     NameSchool: String,
     CourseStudy: String,
     Grade: String,
