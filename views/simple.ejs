@@ -93,6 +93,8 @@
                   <th>State</th>
                   <th>C.V</th>
                   <th>Categories</th>
+                  <th>Status</th>
+                  <th></th>
                 </tr>
                 <% allApp.forEach(function(app){ %>
                   <tr>
@@ -108,8 +110,25 @@
                     <td><%= app.community %></td>
                     <td><%= app.lga %></td>
                     <td><%= app.state %></td>
-                    <td><span class="badge bg-red">view</span></td>
+                    <td><a href="uploads/<%app.cv%>"><span class="badge bg-red">view</span></a></td>
                     <td><%= app.categories %></td>
+                    <%if (app.approvalStatus == 1){ %>
+                    <td>
+                        <button class="btn btn-warning">Pending Approval</button>
+                    </td>   
+                    <%} else if (app.approvalStatus == 2){ %>  
+                    <td>
+                        <button class="btn btn-success">Approved</button>
+                    </td> 
+                    <%} else if (app.approvalStatus == 3){ %>  
+                      <td>
+                          <button class="btn btn-danger">Declined</button>
+                      </td>   
+                    <%} else if (app.approvalStatus == 0){ %>  
+                    <td>
+                        <button class="btn btn-primary">Not Approved</button>
+                    </td>  
+                    <%}%>  
                     <td><a href="application-<%= app._id %>"><button class="btn btn-primary">View Details</button></a></td>
                   </tr>
                   <% })%>

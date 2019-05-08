@@ -9,6 +9,7 @@ var PORT =  process.env.PORT || 3000,
     passportLocalMongoose = require('passport-local-mongoose'),
     router =                require('./controllers/route'),
     auth =                  require('./controllers/auth'),
+    approvals =               require('./controllers/approvals'),
     User =                  require('./models/userModels.'),
     fileUpload =            require('express-fileupload')
     
@@ -45,6 +46,7 @@ app.use(passport.session());
 mongoose.set('useFindAndModify', false);
 app.use(router);
 app.use(auth);
+app.use(approvals);
 app.use(fileUpload());
 
 passport.use(new LocalStrategy(User.authenticate()));
