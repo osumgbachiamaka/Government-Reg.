@@ -9,26 +9,27 @@ var PORT =  process.env.PORT || 3000,
     passportLocalMongoose = require('passport-local-mongoose'),
     router =                require('./controllers/route'),
     auth =                  require('./controllers/auth'),
+    approvals =               require('./controllers/approvals'),
     User =                  require('./models/userModels.'),
     fileUpload =            require('express-fileupload')
     
 
 
     mongoose.set('useCreateIndex', true);
-    // mongoose.connect("mongodb://localhost/government", { useNewUrlParser:true }, function(err){
-    //     if(err){
-    //         console.log("can't connet to database " + err)
-    //         return;
-    //     }
-    //     console.log("connection locally");
-    // }).catch()
-    mongoose.connect("mongodb://user:slatecubeproject1@ds255403.mlab.com:55403/nodeprojects", { useNewUrlParser:true }, function(err){
+    mongoose.connect("mongodb://localhost/government", { useNewUrlParser:true }, function(err){
         if(err){
             console.log("can't connet to database " + err)
             return;
         }
-        console.log("connection successfull");
+        console.log("connection locally");
     }).catch()
+    // mongoose.connect("mongodb://user:slatecubeproject1@ds255403.mlab.com:55403/nodeprojects", { useNewUrlParser:true }, function(err){
+    //     if(err){
+    //         console.log("can't connet to database " + err)
+    //         return;
+    //     }
+    //     console.log("connection successfull");
+    // }).catch()
 
 var app = express();
 app.set('view engine', 'ejs');
@@ -45,6 +46,7 @@ app.use(passport.session());
 mongoose.set('useFindAndModify', false);
 app.use(router);
 app.use(auth);
+app.use(approvals);
 app.use(fileUpload());
 
 passport.use(new LocalStrategy(User.authenticate()));

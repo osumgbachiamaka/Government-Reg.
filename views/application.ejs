@@ -50,7 +50,7 @@
                 <div class="form-row">
                     <div class="col-md-6">
                         <label for="validationCustom02">Last name</label>
-                        <input type="text" class="form-control" name="govern[lastname]" id="validationCustom02" placeholder="Last name" value="Otto" required>
+                        <input type="text" class="form-control" name="govern[lastname]" id="validationCustom02" placeholder="Last name"  required>
                     </div>
                 </div>
                 <div class="form-row">
@@ -127,33 +127,33 @@
                     <div class="col-md-4 mb-3">
                        <label for="validationCustom05">Sex</label>
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio1" name="govern[sex]" class="custom-control-input">
+                            <input type="radio" id="customRadio1" name="govern[sex]" class="custom-control-input" value="Female">
                             <label class="custom-control-label" for="customRadio1">Female</label>
                         </div>
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio2" name="govern[sex]" class="custom-control-input">
+                            <input type="radio" id="customRadio2" name="govern[sex]" class="custom-control-input" value="Male">
                             <label class="custom-control-label" for="customRadio2">Male</label>
                         </div>
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio3" name="govern[sex]" class="custom-control-input">
+                            <input type="radio" id="customRadio3" name="govern[sex]" class="custom-control-input"  value="Prefer not to Say">
                             <label class="custom-control-label" for="customRadio3">Prefer not to say</label>
                         </div>
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="validationCustom05">Marital Status</label>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="maritalStatus1" name="govern[maritalStatus]" class="custom-control-input">
+                        <input type="radio" id="maritalStatus1" name="govern[maritalStatus]" value="Single" class="custom-control-input">
                         <label class="custom-control-label" for="maritalStatus1">Single</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="maritalStatus2" name="govern[maritalStatus]" class="custom-control-input">
+                        <input type="radio" id="maritalStatus2" name="govern[maritalStatus]" value="Married" class="custom-control-input">
                         <label class="custom-control-label" for="maritalStatus2">Married</label>
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="validationCustom05">Categories</label>
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="categories1" name="govern[categories]" class="custom-control-input" value="Elders seeking for business opportunities">
+                            <input type="radio" id="categories1" name="govern[categories]" class="custom-control-input" value="Elders seeking for business opportunities" >
                             <label class="custom-control-label" for="categories1">Elders seeking for business opportunities</label>
                         </div>
                         <div class="custom-control custom-radio">
@@ -188,14 +188,14 @@
                 <div class="form-row">
                     <div class="col-md-6 mb-3">
                     <label for="validationCustom01">Secondary School</label>
-                    <input type="text" class="form-control" name="Eng[School]" id="validationCustom01" placeholder="Secondary School" value="Mark" required>
+                    <input type="text" class="form-control" name="Eng[School]" id="validationCustom01" placeholder="Secondary School" required>
                     <div class="valid-feedback">
                         Looks good!
                     </div>
                     </div>
                     <div class="col-md-6 mb-3">
                     <label for="validationCustom02">Higher Education</label>
-                    <input type="text" class="form-control" name="Eng[HigherE]" id="validationCustom02" placeholder="Higher Education" value="Otto" required>
+                    <input type="text" class="form-control" name="Eng[HigherE]" id="validationCustom02" placeholder="Higher Education" required>
                     <div class="valid-feedback">
                         Looks good!
                     </div>
@@ -205,13 +205,7 @@
 
                 </div>
                 <div class="form-row">
-                    <div class="col-md-6 mb-3">
-                        <label for="validationCustom02">Name of School</label>
-                        <input type="text" class="form-control" name="Eng[NameSchool]" id="validationCustom02" placeholder="Name of School" value="Otto" required>
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
-                    </div>
+                    
                     <div class="col-md-6 mb-3">
                         <label for="validationCustom03">Course of Study</label>
                         <input type="text" class="form-control" name="Eng[CourseStudy]" id="validationCustom03" placeholder="Course of Study" required>
@@ -250,11 +244,11 @@
                             <div class="form-group">
                                 <label>Degree Obtained</label>
                                 <select class="form-control">
-                                    <option>OND</option>
-                                    <option>HND</option>
-                                    <option>BSc/BEd</option>
-                                    <option>MSc</option>
-                                    <option>PhD</option>
+                                    <option value="OND">OND</option>
+                                    <option value="HND">HND</option>
+                                    <option value="BSc/BEd">BSc/BEd</option>
+                                    <option value="MSc">MSc</option>
+                                    <option value="PhD">PhD</option>
                                 </select>
                             </div>
                                 
@@ -380,23 +374,23 @@
                         <label for="validationCustom05">Select Business Interest</label>
                         <br>
                         <div class="custom-control custom-radio d-inline">
-                            <input type="radio" id="businessInterest1" name="business[businessInterest]" class="custom-control-input">
+                            <input type="radio" id="businessInterest1" name="business[businessInterest]" value="Accounting" class="custom-control-input">
                             <label class="custom-control-label" for="businessInterest1">Accounting</label>
                         </div>
                         <div class="custom-control custom-radio d-inline">
-                            <input type="radio" id="businessInterest2" name="business[businessInterest]" class="custom-control-input">
+                            <input type="radio" id="businessInterest2" name="business[businessInterest]" value="Finiancial Analyst" class="custom-control-input">
                             <label class="custom-control-label" for="businessInterest2">Finiancial Analyst</label>
                         </div>
                         <div class="custom-control custom-radio d-inline">
-                            <input type="radio" id="businessInterest3" name="business[businessInterest]" class="custom-control-input">
+                            <input type="radio" id="businessInterest3" name="business[businessInterest]" value="Insurance" class="custom-control-input">
                             <label class="custom-control-label" for="businessInterest3">Insurance</label>
                         </div>
                         <div class="custom-control custom-radio d-inline">
-                            <input type="radio" id="businessInterest4" name="business[businessInterest]" class="custom-control-input">
+                            <input type="radio" id="businessInterest4" name="business[businessInterest]" value="Business Development" class="custom-control-input">
                             <label class="custom-control-label" for="businessInterest4">Business Development</label>
                         </div>
                         <div class="custom-control custom-radio d-inline">
-                            <input type="radio" id="businessInterest5" name="business[businessInterest]" class="custom-control-input">
+                            <input type="radio" id="businessInterest5" name="business[businessInterest]" value="Other" class="custom-control-input">
                             <label class="custom-control-label" for="businessInterest5">other</label>
                         </div>
                     </div>
@@ -429,11 +423,11 @@
                     <div class="col-md-6 mb-3">
                             <label for="validationCustom05">Are you in business as a Part Time or Full Time</label>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="businessNature1" name="business[businessNature]" class="custom-control-input">
+                                    <input type="radio" id="businessNature1" name="business[businessNature]" value="Part Time" class="custom-control-input">
                                     <label class="custom-control-label" for="businessNature1">Part Time</label>
                                 </div>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="businessNature2" name="business[businessNature]" class="custom-control-input">
+                                    <input type="radio" id="businessNature2" name="business[businessNature]" value="Full Time" class="custom-control-input">
                                     <label class="custom-control-label" for="businessNature2">Full Time</label>
                                 </div>
                     </div>
@@ -459,11 +453,11 @@
                     <div class="col-md-6 mb-3">
                         <label for="validationCustom05">Have you mentored any one in business or in leadership before?</label>
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="business[mentored1]" name="business[mentored]" class="custom-control-input">
+                            <input type="radio" id="business[mentored1]" name="business[mentored]" value="Yes" class="custom-control-input">
                             <label class="custom-control-label" for="business[mentored1]">Yes</label>
                         </div>
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="business[mentored2]" name="business[mentored]" class="custom-control-input">
+                            <input type="radio" id="business[mentored2]" name="business[mentored]" value="No" class="custom-control-input">
                             <label class="custom-control-label" for="business[mentored2]">No</label>
                         </div>
                     </div>
@@ -512,11 +506,11 @@
                     <label for="validationCustom05">Area of interest?</label>
                     <br>
                     <div class="custom-control custom-radio d-inline">
-                        <input type="radio" id="areaofInterest1" name="teacher[areaofInterest]" class="custom-control-input">
+                        <input type="radio" id="areaofInterest1" name="teacher[areaofInterest]" value="Science" class="custom-control-input">
                         <label class="custom-control-label" for="areaofInterest1">Science</label>
                     </div>
                     <div class="custom-control custom-radio d-inline">
-                        <input type="radio" id="areaofInterest2" name="teacher[areaofInterest]" class="custom-control-input">
+                        <input type="radio" id="areaofInterest2" name="teacher[areaofInterest]" value="English" class="custom-control-input">
                         <label class="custom-control-label" for="areaofInterest2">English</label>
                     </div>
                 </div>
@@ -524,11 +518,11 @@
                     <label for="validationCustom05">Are you currently employed?</label>
                     <br>
                     <div class="custom-control custom-radio d-inline">
-                        <input type="radio" id="temployed1" name="teacher[employed]" class="custom-control-input">
+                        <input type="radio" id="temployed1" name="teacher[employed]" value="Yes" class="custom-control-input">
                         <label class="custom-control-label" for="temployed1">Yes</label>
                     </div>
                     <div class="custom-control custom-radio d-inline">
-                        <input type="radio" id="temployed2" name="teacher[employed]" class="custom-control-input">
+                        <input type="radio" id="temployed2" name="teacher[employed]" value="No" class="custom-control-input">
                     <label class="custom-control-label" for="temployed2">No</label>
                     </div>
                 </div>
@@ -624,11 +618,11 @@
                     <label for="validationCustom05">Prior to business of interest were you a civil servant?</label>
                     <br>
                     <div class="custom-control custom-radio d-inline">
-                        <input type="radio" id="civilServant1" name="elders[civilServant]" class="custom-control-input">
+                        <input type="radio" id="civilServant1" name="elders[civilServant]"value="Yes" class="custom-control-input">
                         <label class="custom-control-label" for="civilServant1">Yes</label>
                     </div>
                     <div class="custom-control custom-radio d-inline">
-                        <input type="radio" id="civilServant2" name="elders[civilServant]" class="custom-control-input">
+                        <input type="radio" id="civilServant2" name="elders[civilServant]" value="No" class="custom-control-input">
                         <label class="custom-control-label" for="civilServant2">No</label>
                     </div>
                 </div>
@@ -636,11 +630,11 @@
                         <label for="validationCustom05">Are you in business as a part time or full time?</label>
                         <br>
                         <div class="custom-control custom-radio d-inline">
-                            <input type="radio" id="ebusinessNature1" name="elders[businessNature]" class="custom-control-input">
+                            <input type="radio" id="ebusinessNature1" name="elders[businessNature]" value="Part Time" class="custom-control-input">
                             <label class="custom-control-label" for="ebusinessNature1">Part time</label>
                         </div>
                         <div class="custom-control custom-radio d-inline">
-                            <input type="radio" id="ebusinessNature2" name="elders[businessNature]" class="custom-control-input">
+                            <input type="radio" id="ebusinessNature2" name="elders[businessNature]" value="Full Time" class="custom-control-input">
                             <label class="custom-control-label" for="ebusinessNature2">Full time</label>
                         </div>
                  </div>
@@ -691,12 +685,12 @@
                     <label for="validationCustom05">Have you mentored any one in business or in leadership before?</label>
                     <br>
                     <div class="custom-control custom-radio d-inline">
-                        <input type="radio" id="businessNature1" name="elders[businessNature]" class="custom-control-input">
-                        <label class="custom-control-label" for="businessNature1">Yes</label>
+                        <input type="radio" id="elders[mentoring]" name="elders[mentoring]" value="Yes" class="custom-control-input">
+                        <label class="custom-control-label" for="elders[mentoring]">Yes</label>
                     </div>
                     <div class="custom-control custom-radio d-inline">
-                        <input type="radio" id="businessNature2" name="elders[businessNature]" class="custom-control-input">
-                        <label class="custom-control-label" for="businessNature2">No</label>
+                        <input type="radio" id="elders[mentoring]" name="elders[businessNature]" value="No" class="custom-control-input">
+                        <label class="custom-control-label" for="elders[mentoring]">No</label>
                     </div>
                 </div>
             </div>
@@ -783,11 +777,11 @@
                     <label for="validationCustom05">Have you Completed Housemanship/Internship?</label>
                     <br>
                         <div class="custom-control custom-radio d-inline">
-                            <input type="radio" id="completedInternship1" name="medicine[completedInternship]" class="custom-control-input">
+                            <input type="radio" id="completedInternship1" name="medicine[completedInternship]" value="Yes" class="custom-control-input">
                             <label class="custom-control-label" for="completedInternship1">Yes</label>
                         </div>
                         <div class="custom-control custom-radio d-inline">
-                            <input type="radio" id="completedInternship2" name="medicine[completedInternship]" class="custom-control-input">
+                            <input type="radio" id="completedInternship2" name="medicine[completedInternship]" value="No" class="custom-control-input">
                             <label class="custom-control-label" for="completedInternship2">No</label>
                         </div>
                 </div>
@@ -853,11 +847,11 @@
                     <label for="validationCustom05">Did you learn this trade under any one?</label>
                     <br>
                     <div class="custom-control custom-radio d-inline">
-                        <input type="radio" id="learnUnderSomeone1" name="trader[learnUnderSomeone]" class="custom-control-input">
+                        <input type="radio" id="learnUnderSomeone1" name="trader[learnUnderSomeone]" value="Yes" class="custom-control-input">
                         <label class="custom-control-label" for="learnUnderSomeone1">Yes</label>
                     </div>
                     <div class="custom-control custom-radio d-inline">
-                        <input type="radio" id="learnUnderSomeone2" name="trader[learnUnderSomeone]" class="custom-control-input">
+                        <input type="radio" id="learnUnderSomeone2" name="trader[learnUnderSomeone]" value="No" class="custom-control-input">
                         <label class="custom-control-label" for="learnUnderSomeone2">No</label>
                     </div>
                 </div>
@@ -891,11 +885,11 @@
                         <label for="validationCustom05">Are you importing or Exporting?</label>
                         <br>
                         <div class="custom-control custom-radio d-inline">
-                            <input type="radio" id="exportingImporting1" name="trader[exportingImporting]" class="custom-control-input">
+                            <input type="radio" id="exportingImporting1" name="trader[exportingImporting]" value="Importing" class="custom-control-input">
                             <label class="custom-control-label" for="exportingImporting1">Importing</label>
                         </div>
                         <div class="custom-control custom-radio d-inline">
-                            <input type="radio" id="exportingImporting2" name="trader[exportingImporting]" class="custom-control-input">
+                            <input type="radio" id="exportingImporting2" name="trader[exportingImporting]" value="Exporting" class="custom-control-input">
                             <label class="custom-control-label" for="exportingImporting2">Exporting</label>
                         </div>
                     </div>
@@ -934,11 +928,11 @@
                         <label for="validationCustom05">Do you have any bank /Finance Company debts?</label>
                         <br>
                         <div class="custom-control custom-radio d-inline">
-                            <input type="radio" id="financeDepts1" name="trader[financeDepts]" class="custom-control-input">
+                            <input type="radio" id="financeDepts1" name="trader[financeDepts]" value="Yes" class="custom-control-input">
                             <label class="custom-control-label" for="financeDepts1">Yes</label>
                         </div>
                         <div class="custom-control custom-radio d-inline">
-                            <input type="radio" id="financeDepts2" name="trader[financeDepts]" class="custom-control-input">
+                            <input type="radio" id="financeDepts2" name="trader[financeDepts]" value="No" class="custom-control-input">
                             <label class="custom-control-label" for="financeDepts2">No</label>
                         </div>
                     </div>
@@ -966,11 +960,11 @@
                                 <label for="validationCustom05">Do you have young people learning your trade under you?</label>
                                 <br>
                                 <div class="custom-control custom-radio d-inline">
-                                    <input type="radio" id="learningTrade1" name="trader[learningTrade]" class="custom-control-input">
+                                    <input type="radio" id="learningTrade1" name="trader[learningTrade]" value="Yes" class="custom-control-input">
                                     <label class="custom-control-label" for="learningTrade1">Yes</label>
                                 </div>
                                 <div class="custom-control custom-radio d-inline">
-                                    <input type="radio" id="learningTrade2" name="trader[learningTrade]" class="custom-control-input">
+                                    <input type="radio" id="learningTrade2" name="trader[learningTrade]" value="No" class="custom-control-input">
                                     <label class="custom-control-label" for="learningTrade2">No</label>
                                 </div>
                             </div>
