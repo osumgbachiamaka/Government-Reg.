@@ -25,7 +25,9 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="admin-password"><i class="fa fa-circle-o"></i> Change password</a></li>
+                <%if(user.status == 1){%>
                 <li><a href="create-admin"><i class="fa fa-circle-o"></i> Create an admin</a></li>
+                <%}%>
               </ul>
             </li>
             <li class="treeview">
@@ -52,9 +54,12 @@
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="admin"><i class="fa fa-circle-o"></i> Pending</a></li>
-                <li><a href="admin-password"><i class="fa fa-circle-o"></i> Approved</a></li>
-                <li><a href="create-admin"><i class="fa fa-circle-o"></i> Declined</a></li>
+                <li><a href="admin"><i class="fa fa-circle-o"></i> All </a></li>
+                <%if(user.status == 1){%>
+                <li><a href="pending-applications"><i class="fa fa-circle-o"></i> Pending</a></li>
+                <%}%>
+                <li><a href="approved-applications"><i class="fa fa-circle-o"></i> Approved</a></li>
+                <li><a href="declined-applications"><i class="fa fa-circle-o"></i> Declined</a></li>
               </ul>
             </li>
             <li class="">

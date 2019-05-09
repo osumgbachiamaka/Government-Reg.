@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var RegistGovernSchema = new mongoose.Schema({
+var ApprovedApplSchema = new mongoose.Schema({
     fullname: String,
     dateofBirth: String,
     sex: String,
@@ -24,7 +24,6 @@ var RegistGovernSchema = new mongoose.Schema({
     fmlyMembers: String,
     expandBusiness: String,
     attractCapital: String,
-    mentoring: String,
     details: String,
     respStateElder: String,
     respCommElder: String,
@@ -44,7 +43,7 @@ var RegistGovernSchema = new mongoose.Schema({
     projectHelp: String,
 
     School: String,
-    HigherE: String,
+    NameSchool: String,
     CourseStudy: String,
     Grade: String,
     yearAdmitted: String,
@@ -108,11 +107,9 @@ var RegistGovernSchema = new mongoose.Schema({
     businessEBSDP: String,
     presResident: String,
 
-    approvalStatus: Number,
-    comment: String,
-    commentUser: String,
+    approvalStatus: String,
 
     date: {type: Date, default: Date.now}
 })
 
-module.exports = mongoose.model("RegistGov", RegistGovernSchema);
+module.exports = mongoose.model("ApprovedAppl", ApprovedApplSchema);

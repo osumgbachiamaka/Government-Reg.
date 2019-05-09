@@ -41,7 +41,7 @@ router.post('/create-admin', isLoggedIn, function(req, res){
         }
         else if(all.length == 0){
              var creatAdmin = req.body.admin;
-            User.register(new User({name: creatAdmin.name, username: creatAdmin.username}), creatAdmin.password, function(err, newAdmin){
+            User.register(new User({name: creatAdmin.name, username: creatAdmin.username, status: 2}), creatAdmin.password, function(err, newAdmin){
                 if(err){
                     return console.log('An Error occurred ' + err)
                 }
@@ -69,13 +69,13 @@ router.post('/update-password', isLoggedIn, function(req, res){
 
 router.post('/register', function(req, res){
     var userDetails = req.body;
-    User.register(new User({name: userDetails.name, username: userDetails.username}), userDetails.password, function(err, user){
+    User.register(new User({name: userDetails.name, username: userDetails.username, status: 1}), userDetails.password, function(err, user){
         if(err){
             console.log(err)
             return res.render('register');
         }
         passport.authenticate("local")(req, res, function(){
-            res.redirect("/posts");
+            res.redirect("/admin-control");
         })
     })
 })
