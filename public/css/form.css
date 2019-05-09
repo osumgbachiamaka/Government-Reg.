@@ -7,22 +7,41 @@ body{
 }
 .biggest{
     width:100%;
-    background-color:#fff;
+    background-color:rgb(43, 121, 61);
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     padding:50px;
 }
 .form-control{
     border-radius:0rem!important;
     /* padding:30px; */
-    height:3em;
+    height:2.4em;
 }
 .title{
     margin-bottom:30px;
 }
 label{
-    color:#585656;
+    /* color:#145a34; */
+    color:#fff;
     font-size:12px;
     text-transform:uppercase;
 }
+h1{
+    /* color:#145a34!important; */
+    color:#fff;
+}
 
+.botton{
+    width:25%;
+    background-color:#000;
+    border: #000;
+    border-radius: 0rem !important;
+    margin-top:2rem;
+}
+.botton:hover{
+    background-color:#fff;
+    color:#000;
+    box-shadow:1px 2px #000;;
+    
+}
 /* biggest ml-auto mr-auto my-4 */
+/* <textarea class="form-control" name="Eng[uniqueAchievements]" id="exampleFormControlTextarea1" rows="1"></textarea> */
