@@ -1,10 +1,20 @@
- /*Ash - #2c3e50*/
- /*Orange - #e74c3c*/
- /*White - #f5f6fa*/
+
+
+ @media screen and (max-width: 560px) {
+                
+    .contain{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .test{
+        width: 100%;
+    }
+}
+
 
  body{
     font: 15px/1.5 Arial, Helvetica, sans-serif;   /*font-size/line-height font-family*/
-    background-color: #dfe6e9;
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
 }
@@ -23,21 +33,27 @@ ul{
 
 /*Header Styles*/
 .header{
-    color: #089342;
+    color: #ffffff;
     float: right;
     font-size: 1.2rem;
     margin: 10px;
 }
 .bg{
-    background-color: #ffffff;
+    background-color: #067d39;
+    /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
 }
-
-
-.header a{
+nav{
+    transition: background-color 0.4s ease-out;
+}
+.changeColor{
+    background-color: green;
+    color: white;
+}
+.header a:hover{
     color: #f5f6fa;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 1.2.5rem;
     letter-spacing: 1.5px;
 }
 nav img{
@@ -58,17 +74,27 @@ nav img{
     background-color: #d4a833;
     color: #ffffff;
     width: 200px;
-    height: 45px;
+    height: 45px;    
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+}
+.but:hover{
+    background-color: #12401d;
+}
+.reg{
+    width: 60%;
+    margin: 0 auto;
 }
 .text{
     width: 60%;
     background: rgba(22, 22, 22, .5);
-    margin-top: 50px;
+    margin-top: 150px;
+    padding: 10px;
 }
 .text .space{
     width: 90%;
     margin: 0 auto;
-    padding: 1px;
+    padding-top: 10px;
 }
 .text p{
     font-size: 1rem;
@@ -123,20 +149,15 @@ footer p{
 }
 
 /* Register Page*/
-#main-register, #main-login, #main-showpost, #main-editpost, #main-user{
-   background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(https://images.pexels.com/photos/1413653/pexels-photo-1413653.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940); 
-   background-repeat: no-repeat;
-   background-size: cover;
+#main-login{
+   background-color: #ffffff;
    min-height: 100vh;
+   width: 30%;
    text-align: center;
+   margin: 0 auto;
+   padding-top: 180px;
 }
 
-#main-register h1, #main-login h1, #main-showpost h2, #main-editpost h2, #main-user h1{
-   padding-top: 4%;
-   margin-bottom: 0;
-   color: #f5f6fa;
-   font-size: 40px;
-}
 
 /*Global*/
 form{
@@ -202,13 +223,9 @@ form p span a:hover{
    color: #f5f6fa;
 }
 
-/*Posts Page*/
-#main-post {
-   text-align: center;
-   min-height: 100vh;
-   background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://images.pexels.com/photos/1413653/pexels-photo-1413653.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940); 
-   background-repeat: no-repeat;
-   background-size: cover;
+#main-login input{
+    width: 90%;
+    height: 40px;
 }
 
 #main-post h1{
