@@ -41,6 +41,9 @@ router.get('/application-:id', isLoggedIn, function(req, res){
 router.get('/testing', function(req, res){
     res.render('testi');
 })
+router.get('/uploads:id', function(req, res){
+    res.render('');
+})
 router.get('/admin', isLoggedIn, function(req, res){
     Post.find({}, function(err, allApplications){
         if (err){

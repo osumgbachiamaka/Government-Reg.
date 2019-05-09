@@ -26,10 +26,10 @@ router.get('/logout', function(req, res){
 })
 
 router.get('/admin-password', isLoggedIn, function(req, res){
-    res.render('change-password')
+    res.render('change-password', {user: req.user})
 })
 router.get('/create-admin', isLoggedIn, function(req, res){
-    res.render('create-admin')
+    res.render('create-admin', {user: req.user})
 })
 //========post======//
 
