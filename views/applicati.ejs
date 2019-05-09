@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>
+
+        </title>
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="../css/bootstrap.min.css">
+            <link rel="stylesheet" href="../css/form.css">
+            <style>
+                @media screen and (max-width: 560px) {
+                    
+                    .contain{
+                        width: 100%;
+                        margin: 0 auto;
+                    }
+                }
+            </style>
+    </head>
+    <body>
+        <div class=container-fluid>
+            <div class="contain">
+            <div class="biggest ml-auto mr-auto my-4">
+            <div class="title text-center">
+                <h1>Ebonyi State Stimulus Development Project</h1>
+            </div>
+            <form class="needs-validation" action="registrationGovern" method="POST" enctype="multipart/form-data" novalidate>
+            <!-- <form class="needs-validation" action="registrationGovern" method="POST" novalidate> -->
+                <div class="form-row">
+                    <div class="col-md-6">
+                    <label for="validationCustom01">First name</label>
+                    <input type="text" class="ntrol form-control" name="govern[firstname]" id="validationCustom01" placeholder="First name" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    </div>
+                    <div class="col-md-6">
+                    <label for="validationCustom02">Middle name</label>
+                    <input type="text" class="form-control" name="govern[middlename]" id="validationCustom02" placeholder="Last name" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    </div>
+                  
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <label for="validationCustom02">Last name</label>
+                        <input type="text" class="form-control" name="govern[lastname]" id="validationCustom02" placeholder="Last name" value="Otto" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="validationCustom03">Date of Birth</label>
+                        <input type="date" class="form-control" name="govern[dateofBirth]" id="validationCustom03" placeholder="City" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid date.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustomUsername">Email</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                </div>
+                                <input type="email" class="form-control" name="govern[email]" id="validationCustomUsername" placeholder="Email" aria-describedby="inputGroupPrepend" required>
+                                <div class="invalid-feedback">
+                                Invalid email.
+                                </div>
+                            </div>
+                        </div>
+                    <div class="col-md-6">
+                        <label for="validationCustom04">Age</label>
+                        <input type="text" class="form-control" name="govern[age]" id="validationCustom04" placeholder="Age" required>
+                        <div class="invalid-feedback">
+                            Age Invalid.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom03">Village</label>
+                        <input type="text" class="form-control" name="govern[village]" id="validationCustom03" placeholder="Village" required>
+                            <div class="invalid-feedback">
+                                Village can't be left empty
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom03">Phone</label>
+                        <input type="number" class="form-control" name="govern[phone]" id="validationCustom03" placeholder="Phone" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid date.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom03">Autonomous Community</label>
+                        <input type="text" class="form-control" name="govern[community]" id="validationCustom03" placeholder="Autonomous Community" required>
+                        <div class="invalid-feedback">
+                            Autonomous Community can't be left empty
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom03">L.G.A</label>
+                        <input type="text" class="form-control" name="govern[lga]" id="validationCustom03" placeholder="L.G.A" required>
+                        <div class="invalid-feedback">
+                            L.G.A can't be left empty
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom03">State</label>
+                            <input type="text" class="form-control" name="govern[state]" id="validationCustom03" placeholder="State" required>
+                            <div class="invalid-feedback">
+                                State can't be left empty
+                            </div>
+                        </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Upload C.V</label>
+                        <div class="custom-file">
+                            <input type="file" style="background-radius:none;" class="form-control custom-file-input" name="govern[cv]" id="validatedCustomFile" >
+                            <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                            <div class="invalid-feedback">Example invalid custom file feedback</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                       <label for="validationCustom05">Sex</label>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio1" name="govern[sex]" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio1">Female</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio2" name="govern[sex]" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio2">Male</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio3" name="govern[sex]" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio3">Prefer not to say</label>
+                        </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom05">Marital Status</label>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="maritalStatus1" name="govern[maritalStatus]" class="custom-control-input">
+                        <label class="custom-control-label" for="maritalStatus1">Single</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="maritalStatus2" name="govern[maritalStatus]" class="custom-control-input">
+                        <label class="custom-control-label" for="maritalStatus2">Married</label>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom05">Categories</label>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="categories1" name="govern[categories]" class="custom-control-input" value="Elders seeking for business opportunities">
+                            <label class="custom-control-label" for="categories1">Elders seeking for business opportunities</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="categories2" name="govern[categories]" class="custom-control-input" value="Teachers">
+                            <label class="custom-control-label" for="categories2">Teachers</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="categories3" name="govern[categories]" class="custom-control-input" value="Engineers/Technologists">
+                            <label class="custom-control-label" for="categories3">Engineers/Technologists</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="categories4" name="govern[categories]" class="custom-control-input" value="Medicine">
+                            <label class="custom-control-label" for="categories4">Medicine</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="categories5" name="govern[categories]" class="custom-control-input" value="Traders">
+                            <label class="custom-control-label" for="categories5">Traders</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="categories6" name="govern[categories]" class="custom-control-input" value="Business Interest">
+                            <label class="custom-control-label" for="categories6">Business Interest</label>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+                <!--Engineers/Technologists-->
+            <div class="biggest ml-auto mr-auto my-4">
+                <div class="text-center">
+                    <h1>Engineers/Technologists</h1>
+                </div>
+            <form class="needs-validation" novalidate>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                    <label for="validationCustom01">Secondary School</label>
+                    <input type="text" class="form-control" name="Eng[School]" id="validationCustom01" placeholder="Secondary School" value="Mark" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    </div>
+                    <!-- <div class="col-md-6 mb-3">
+                    <label for="validationCustom02">Higher Education</label>
+                    <input type="text" class="form-control" name="Eng[HigherE]" id="validationCustom02" placeholder="Higher Education" value="Otto" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    </div> -->
+
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom02">Name of School</label>
+                        <input type="text" class="form-control" name="Eng[NameSchool]" id="validationCustom02" placeholder="Name of School" value="Otto" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-row">
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom03">Course of Study</label>
+                        <input type="text" class="form-control" name="Eng[CourseStudy]" id="validationCustom03" placeholder="Course of Study" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid date.
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom03">Grade/CGPA</label>
+                        <input type="text" class="form-control" name="Eng[Grade]" id="validationCustom03" placeholder="Grade/CGPA" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid date.
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom03">Year admitted</label>
+                        <input type="text" class="form-control" name="Eng[yearAdmitted]" id="validationCustom03" placeholder="Year admitted" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid date.
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom03">Year graduated</label>
+                        <input type="text" class="form-control" name="Eng[yearGraduated]" id="validationCustom03" placeholder="Year graduated" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid date.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4 mb-6">
+                            <div class="form-group">
+                                <label>Degree Obtained</label>
+                                <select class="form-control">
+                                    <option>OND</option>
+                                    <option>HND</option>
+                                    <option>BSc/BEd</option>
+                                    <option>MSc</option>
+                                    <option>PhD</option>
+                                </select>
+                            </div>
+                                
+                    </div> 
+                    <!-- <label for="exampleFormControlSelect1" name="Eng[degreeObtained]">Degree Obtained</label> -->
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom02">Name of School</label>
+                        <input type="text" class="form-control" name="Eng[School]" id="validationCustom02" placeholder="Name of School" value="Otto" required>
+                        <div class="valid-feedback">
+                        Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                            <label for="validationCustom03">Name of Certification Received, if any?</label>
+                            <input type="text" class="form-control" name="Eng[certReceived]" id="validationCustom03" placeholder="Name of Certification Received, if any?" required>
+                            <div class="invalid-feedback">
+                                State can't be left empty
+                            </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-6">
+                        <label for="validationCustom03">Professional certification, if any?</label>
+                        <input type="text" class="form-control" name="Eng[professionalCert]" id="validationCustom03" placeholder="Professional certification, if any?" required>
+                        <div class="invalid-feedback">
+                            Autonomous Community can't be left empty
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom03">School/Program</label>
+                        <input type="text" class="form-control" name="Eng[Schoolprogram]" id="validationCustom03" placeholder="School/Program" required>
+                        <div class="invalid-feedback">
+                             L.G.A can't be left empty
+                       </div>
+                    </div>
+                </div>
+                <h4>Work experience</h4>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">Employer</label>
+                        <input type="text" class="form-control" name="Eng[employer]" id="validationCustom03" placeholder="Employer" required>
+                        <div class="invalid-feedback">
+                            Village can't be left empty
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">Address of Employer</label>
+                        <input type="text" class="form-control" name="Eng[addressEmployer]" id="validationCustom03" placeholder="JAddress of Employer" required>
+                        <div class="invalid-feedback">
+                            Autonomous Community can't be left empty
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">Job Title</label>
+                        <input type="text" class="form-control" name="Eng[jobTitle]" id="validationCustom03" placeholder="Job Title" required>
+                        <div class="invalid-feedback">
+                            L.G.A can't be left empty
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom03">Name of supervisor</label>
+                        <input type="text" class="form-control" name="Eng[nameSupervisor]" id="validationCustom03" placeholder="Name of supervisor" required>
+                        <div class="invalid-feedback">
+                            Village can't be left empty
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom03">Supervisor's phone number</label>
+                        <input type="text" class="form-control" name="Eng[supervisorPhone]" id="validationCustom03" placeholder="Supervisor's phone number" required>
+                        <div class="invalid-feedback">
+                            Autonomous Community can't be left empty
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom03">Date Started </label>
+                        <input type="date" class="form-control" name="Eng[dateStarted]" id="validationCustom03" placeholder="Name of supervisor" required>
+                        <div class="invalid-feedback">
+                            Village can't be left empty
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom03">Date Ended</label>
+                        <input type="date" class="form-control" name="Eng[dateEnded]" id="validationCustom03" placeholder="Supervisor's phone number" required>
+                        <div class="invalid-feedback">
+                            Autonomous Community can't be left empty
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">In all your work experience; describe a unique achievement or unique role played. (Give details on each of such achievements)</label>
+                                <textarea class="form-control" name="Eng[uniqueAchievements]" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <h4>Stimulus Questions</h4>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom03">What are you doing currently and for how long?</label>
+                        <input type="text" class="form-control" name="Eng[currentlyDoing]" id="validationCustom03" placeholder="What are you doing currently and for how long?" required>
+                        <div class="invalid-feedback">
+                            Village can't be left empty
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom03">What type of assistance would you require? (give detail)</label>
+                        <input type="text" class="form-control" name="Eng[assistanceNeeded]" id="validationCustom03" placeholder="What type of assistance would you require? (give detail)" required>
+                        <div class="invalid-feedback">
+                            Village can't be left empty
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label>Do you have any business plan? if yes upload a copy</label>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" name="Eng[businessPlan]" id="validatedCustomFile" >
+                            <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                            <div class="invalid-feedback">Example invalid custom file feedback</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom03">What would you like to achieve through this stimulus project</label>
+                        <input type="text" class="form-control" name="Eng[yourAchievement]" id="validationCustom03" placeholder="What would you like to achieve through this stimulus project" required>
+                        <div class="invalid-feedback">
+                            Village can't be left empty
+                        </div>
+                    </div>
+                </div>
+        
+                <h4>Referral Data</h4>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom03">Name of referral</label>
+                        <input type="text" class="form-control" name="Eng[referralName]" id="validationCustom03" placeholder="Name of referral" required>
+                        <div class="invalid-feedback">
+                            Village can't be left empty
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom03">Referral phone number</label>
+                        <input type="text" class="form-control" name="Eng[referralPhone]" id="validationCustom03" placeholder="Referral phone number" required>
+                        <div class="invalid-feedback">
+                            Autonomous Community can't be left empty
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label for="validationCustom03">Relationship with Referrer</label>
+                        <input type="text" class="form-control" name="Eng[referralRelationship]" id="validationCustom03" placeholder="Relationship with Referrer" required>
+                            <div class="invalid-feedback">
+                                Autonomous Community can't be left empty
+                    </div>
+                </div>
+            </div>
+        </div>
+                <!-- Business Interest-->
+        <div class="biggest ml-auto mr-auto my-4">
+                <div>
+                    <h3>Business Interest</h3>
+                </div>
+               
+                <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                        <label for="validationCustom05">Select Business Interest</label>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="businessInterest1" name="business[businessInterest]" class="custom-control-input">
+                            <label class="custom-control-label" for="businessInterest1">Accounting</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="businessInterest2" name="business[businessInterest]" class="custom-control-input">
+                            <label class="custom-control-label" for="businessInterest2">Finiancial Analyst</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="businessInterest3" name="business[businessInterest]" class="custom-control-input">
+                            <label class="custom-control-label" for="businessInterest3">Insurance</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="businessInterest4" name="business[businessInterest]" class="custom-control-input">
+                            <label class="custom-control-label" for="businessInterest4">Business Development</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="businessInterest5" name="business[businessInterest]" class="custom-control-input">
+                            <label class="custom-control-label" for="businessInterest5">other</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom03">Qualification (Professional Only)</label>
+                        <input type="text" class="form-control" name="business[Qualification]" id="validationCustom03" placeholder="Qualification (Professional Only)" required>
+                        <div class="invalid-feedback">
+                            Autonomous Community can't be left empty
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label for="validationCustom03">Work experience in the last five (5) years</label>
+                        <input type="text" class="form-control" name="business[workExper]" id="validationCustom03" placeholder="Work experience in the last five (5) years" required>
+                        <div class="invalid-feedback">
+                            Village can't be left empty
+                        </div>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label for="validationCustom03">Discuss your work experience in relation to the project and major tasks executed over time</label>
+                        <input type="text" class="form-control" name="business[discussWorkExp]" id="validationCustom03" placeholder="Discuss your work experience in relation to the project and major tasks executed over time" required>
+                        <div class="invalid-feedback">
+                            Village can't be left empty
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom05">Are you in business as a Part Time or Full Time</label>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="businessNature1" name="business[businessNature]" class="custom-control-input">
+                            <label class="custom-control-label" for="businessNature1">Part Time</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="businessNature2" name="business[businessNature]" class="custom-control-input">
+                            <label class="custom-control-label" for="businessNature2">Full Time</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom04">Provide specific successes and challenges</label>
+                        <input type="text" class="form-control" name="business[succeChall]" id="validationCustom04" placeholder="Challenges" required>
+                        <div class="invalid-feedback">
+                            Age Invalid.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom04">How many people were involved in each of the projects stated above?</label>
+                        <input type="text" class="form-control" name="business[peopleProject]" id="validationCustom04" placeholder="How many?" required>
+                        <div class="invalid-feedback">
+                            Age Invalid.
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom05">Have you mentored any one in business or in leadership before?</label>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="business[mentored1]" name="business[mentored]" class="custom-control-input">
+                            <label class="custom-control-label" for="business[mentored1]">Yes</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="business[mentored2]" name="business[mentored]" class="custom-control-input">
+                            <label class="custom-control-label" for="business[mentored2]">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label for="validationCustom03">If you have, can you provide us their name, phone number and show remark of your experience with them</label>
+                        <input type="text" class="form-control" name="business[remarkproject]" id="validationCustom03" placeholder="Details" required>
+                        <div class="invalid-feedback">
+                            Village can't be left empty
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label for="validationCustom03">What entrepreneurial interest do you have or desire?</label>
+                        <input type="text" class="form-control" name="business[entInterest]" id="validationCustom03" placeholder="Desires" required>
+                        <div class="invalid-feedback">
+                            Village can't be left empty
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label for="validationCustom03">How will you want this project (EB-SDP) to help you achieve those entrepreneurial desires?</label>
+                        <input type="text" class="form-control" name="business[EBSDP]" id="validationCustom03" placeholder="Expectations" required>
+                        <div class="invalid-feedback">
+                            Village can't be left empty
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label for="validationCustom03">Where are you presently resident</label>
+                        <input type="text" class="form-control" name="business[presResident]" id="validationCustom03" placeholder="Resident" required>
+                        <div class="invalid-feedback">
+                            Village can't be left empty
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!--Teachers-->
+                <div class="biggest ml-auto mr-auto my-4">
+                    <div>
+                        <h3>Teachers</h3>
+                    </div>
+                <div class="form-row">
+                    <div class="col-md-3 mb-3">
+                    <label for="validationCustom05">Area of interest?</label>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="areaofInterest1" name="teacher[areaofInterest]" class="custom-control-input">
+                        <label class="custom-control-label" for="areaofInterest1">Science</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="areaofInterest2" name="teacher[areaofInterest]" class="custom-control-input">
+                        <label class="custom-control-label" for="areaofInterest2">English</label>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom03">School Attended</label>
+                    <input type="text" class="form-control" name="teacher[schlAttended]" id="validationCustom03" placeholder="School Attended" required>
+                    <div class="invalid-feedback">
+                        Autonomous Community can't be left empty
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom03">Class of Degree / Grade Obtained</label>
+                    <input type="text" class="form-control" name="teacher[gradeObtained]" id="validationCustom03" placeholder="Class of Degree / Grade Obtained" required>
+                    <div class="invalid-feedback">
+                        Autonomous Community can't be left empty
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom03">Qualification Obtained</label>
+                    <input type="text" class="form-control" name="teacher[qualification]" id="validationCustom03" placeholder="Qualification Obtained" required>
+                    <div class="invalid-feedback">
+                        Autonomous Community can't be left empty
+                    </div>
+                </div>
+            </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom05">Are you currently employed?</label>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="temployed1" name="teacher[employed]" class="custom-control-input">
+                            <label class="custom-control-label" for="temployed1">Yes</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="temployed2" name="teacher[employed]" class="custom-control-input">
+                            <label class="custom-control-label" for="temployed2">No</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom04">If 'yes' to  the Question above, Who is your Employer?</label>
+                        <input type="text" class="form-control" name="teacher[employer]" id="validationCustom04" placeholder="Employer" required>
+                        <div class="invalid-feedback">
+                            Age Invalid.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">Years of Work Experience</label>
+                        <input type="number" class="form-control" name="teacher[yrWorkExp]" id="validationCustom03" placeholder="Details" required>
+                        <div class="invalid-feedback">
+                            Village can't be left empty
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">Have you taught Before? If what Subject?</label>
+                        <input type="text" class="form-control" name="teacher[subject]" id="validationCustom03" placeholder="Desires" required>
+                        <div class="invalid-feedback">
+                            Village can't be left empty
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">Desire Interest in career development</label>
+                        <input type="text" class="form-control" name="teacher[intrtDvpmt]" id="validationCustom03" placeholder="Career Development" required>
+                        <div class="invalid-feedback">
+                            Village can't be left empty
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label for="validationCustom03">How will this project help you</label>
+                        <input type="text" class="form-control" name="teacher[projectHelp]" id="validationCustom03" placeholder="Explainn" required>
+                        <div class="invalid-feedback">
+                            Village can't be left empty
+                        </div>
+                    </div>
+                </div> 
+            </div>
+                <!--Elders seeking for business opportunities-->
+                <div class="biggest ml-auto mr-auto my-4">
+            <div>
+                <h3>Elders seeking for business opportunities</h3>
+            </div>
+                <div class="form-row">
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom03">What is the business of interest</label>
+                    <input type="text" class="form-control" name="elders[businessIntrst]" id="validationCustom03" placeholder="Business of Interest" required>
+                    <div class="invalid-feedback">
+                        Autonomous Community can't be left empty
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom03">If you have been in business, for how long and what is the business</label>
+                    <input type="text" class="form-control" name="elders[businessHwLng]" id="validationCustom03" placeholder="Business and how long" required>
+                    <div class="invalid-feedback">
+                        Autonomous Community can't be left empty
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom05">Prior to business of interest were you a civil servant?</label>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="civilServant1" name="elders[civilServant]" class="custom-control-input">
+                        <label class="custom-control-label" for="civilServant1">Yes</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="civilServant2" name="elders[civilServant]" class="custom-control-input">
+                        <label class="custom-control-label" for="civilServant2">No</label>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom03">Prior to business of interest where did you work?</label>
+                    <input type="text" class="form-control" name="elders[formerWork]" id="validationCustom03" placeholder="Former work place" required>
+                    <div class="invalid-feedback">
+                        Autonomous Community can't be left empty
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom03">If you are already in business, how long?</label>
+                    <input type="number" class="form-control" name="elders[businessLng]" id="validationCustom03" placeholder="Duration" required>
+                    <div class="invalid-feedback">
+                        Village can't be left empty
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom05">Are you in business as a part time or full time?</label>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="ebusinessNature1" name="elders[businessNature]" class="custom-control-input">
+                        <label class="custom-control-label" for="ebusinessNature1">Part time</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="ebusinessNature2" name="elders[businessNature]" class="custom-control-input">
+                        <label class="custom-control-label" for="ebusinessNature2">Full time</label>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom03">How many members of your family have worked with you in the business</label>
+                    <input type="number" class="form-control" name="elders[fmlyMembers]" id="validationCustom03" placeholder="0" required>
+                    <div class="invalid-feedback">
+                        Village can't be left empty
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom03">Will you love to expand your business and why?</label>
+                    <input type="text" class="form-control" name="elders[expandBusiness]" id="validationCustom03" placeholder="Business Expansion" required>
+                    <div class="invalid-feedback">
+                        Village can't be left empty
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom03">Will you like to attract more capital and why?</label>
+                    <input type="text" class="form-control" name="elders[attractCapital]" id="validationCustom03" placeholder="More Capital" required>
+                    <div class="invalid-feedback">
+                        Village can't be left empty
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-2 mb-3">
+                    <label for="validationCustom05">Have you mentored any one in business or in leadership before?</label>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="businessNature1" name="elders[businessNature]" class="custom-control-input">
+                        <label class="custom-control-label" for="businessNature1">Yes</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="businessNature2" name="elders[businessNature]" class="custom-control-input">
+                        <label class="custom-control-label" for="businessNature2">No</label>
+                    </div>
+                </div>
+                <div class="col-md-5 mb-3">
+                    <label for="validationCustom03">If you have, can you provide us their name, phone number and remark of your experience with them</label>
+                    <input type="text" class="form-control" name="elders[details]" id="validationCustom03" placeholder="Details" required>
+                    <div class="invalid-feedback">
+                        Village can't be left empty
+                    </div>
+                </div>
+                <div class="col-md-5 mb-3">
+                    <label for="validationCustom03">What is your responsibility to the state as an elder?</label>
+                    <input type="text" class="form-control" name="elders[respStateElder]" id="validationCustom03" placeholder="Responsibility" required>
+                    <div class="invalid-feedback">
+                        Village can't be left empty
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom03">What is your responsibility to the community as an elder?</label>
+                    <input type="text" class="form-control" name="elders[respCommElder]" id="validationCustom03" placeholder="Responsibility" required>
+                    <div class="invalid-feedback">
+                        Village can't be left empty
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom03">Where are you presently resident?</label>
+                    <input type="text" class="form-control" name="elders[presentResident]" id="validationCustom03" placeholder="Resident" required>
+                    <div class="invalid-feedback">
+                        Village can't be left empty
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom03">What is your area of interest as it relate to Ebonyi State Stimulus Development Projects</label>
+                    <input type="text" class="form-control" name="elders[areaIntEbnyi]" id="validationCustom03" placeholder="Interest" required>
+                    <div class="invalid-feedback">
+                        Village can't be left empty
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-12 mb-3">
+                    <label for="validationCustom03">What type of assistance would you require and how can we help you?</label>
+                    <input type="text" class="form-control" name="elders[AssistanceRq]" id="validationCustom03" placeholder="Assistance" required>
+                    <div class="invalid-feedback">
+                        Village can't be left empty
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!--Medicine-->
+            <div class="biggest ml-auto mr-auto my-4">
+            <div>
+                <h3>Medicine</h3>
+            </div>
+            
+            <div class="form-row">
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom03">School Attended</label>
+                    <input type="text" class="form-control" name="medicine[SchoolAt]" id="validationCustom03" placeholder="School Attended" required>
+                    <div class="invalid-feedback">
+                        Autonomous Community can't be left empty
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom03">Year of Graduation</label>
+                    <input type="date" class="form-control" name="medicine[yrGrad]" id="validationCustom03"  required>
+                    <div class="invalid-feedback">
+                        Autonomous Community can't be left empty
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom03">Area of Specialization</label>
+                    <input type="text" class="form-control" name="medicine[AreaSpec]" id="validationCustom03" placeholder="Specialization" required>
+                    <div class="invalid-feedback">
+                        Autonomous Community can't be left empty
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom05">Have you Completed Housemanship/Internship?</label>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="completedInternship1" name="medicine[completedInternship]" class="custom-control-input">
+                        <label class="custom-control-label" for="completedInternship1">Yes</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="completedInternship2" name="medicine[completedInternship]" class="custom-control-input">
+                        <label class="custom-control-label" for="completedInternship2">No</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom03">Professional Work Experience</label>
+                    <input type="text" class="form-control" name="medicine[ProfWrkExp]" id="validationCustom03" placeholder="Work Experience" required>
+                    <div class="invalid-feedback">
+                        Village can't be left empty
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom03">Community Outreach/Voluntary Work Experience</label>
+                    <input type="text" class="form-control" name="medicine[VolWrkExp]" id="validationCustom03" placeholder="Voluntary Experience" required>
+                    <div class="invalid-feedback">
+                        Village can't be left empty
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label>Upload copy of license</label>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" name="medicine[license]" id="validatedCustomFile" >
+                        <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                        <div class="invalid-feedback">Example invalid custom file feedback</div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom03">What area of interest do you have?</label>
+                    <input type="text" class="form-control" name="medicine[areaIntrst]" id="validationCustom03" placeholder="Interest" required>
+                    <div class="invalid-feedback">
+                        Village can't be left empty
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom03">How can the State Government help you achieve your interest</label>
+                    <input type="text" class="form-control" name="medicine[governmentHelp]" id="validationCustom03" placeholder="Explain" required>
+                    <div class="invalid-feedback">
+                        Village can't be left empty
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!--Traders-->
+            <div class="biggest ml-auto mr-auto my-4">
+            <div>
+                <h3>Traders</h3>
+            </div>
+            <span><strong>(Note applicants must be doing sales of over Ten Million Naira yearly (₦10,000,000).</strong></span>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom03"> How many years have you been trading?</label>
+                    <input type="number" class="form-control" name="trader[yrstrading]" id="validationCustom03" placeholder="0" required>
+                    <div class="invalid-feedback">
+                        Village can't be left empty
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom05">Did you learn this trade under any one?</label>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="learnUnderSomeone1" name="trader[learnUnderSomeone]" class="custom-control-input">
+                        <label class="custom-control-label" for="learnUnderSomeone1">Yes</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="learnUnderSomeone2" name="trader[learnUnderSomeone]" class="custom-control-input">
+                        <label class="custom-control-label" for="learnUnderSomeone2">No</label>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom03">If Yes , for how long?</label>
+                    <input type="text" class="form-control" name="trader[duration]" id="validationCustom03" placeholder="5 years" required>
+                    <div class="invalid-feedback">
+                        Autonomous Community can't be left empty
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">Where did you learn?</label>
+                        <input type="text" class="form-control" name="trader[learn]" id="validationCustom03" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Village can't be left empty
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">What line of trade are you involved in?</label>
+                        <input type="text" class="form-control" name="trader[tradeLine]" id="validationCustom03" placeholder="5 years" required>
+                        <div class="invalid-feedback">
+                            Autonomous Community can't be left empty
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom05">Are you importing or Exporting?</label>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="exportingImporting1" name="trader[exportingImporting]" class="custom-control-input">
+                            <label class="custom-control-label" for="exportingImporting1">Importing</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="exportingImporting2" name="trader[exportingImporting]" class="custom-control-input">
+                            <label class="custom-control-label" for="exportingImporting2">Exporting</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">If you are importing, Do you use Form M
+                            to import or you just buy dollars?
+                            (Answer if only you are importing)</label>
+                        <input type="text" class="form-control" name="trader[dollarsHow]" id="validationCustom03" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Village can't be left empty
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">If you are exporting, How do you receive
+                            your money after you have exported</label>
+                        <input type="text" class="form-control" name="trader[receiveMoney]" id="validationCustom03" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Village can't be left empty
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">If you are not importing and not
+                            exporting, where do you source your
+                            goods/products?</label>
+                        <input type="text" class="form-control" name="trader[sourceGoods]" id="validationCustom03" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Village can't be left empty
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom05">Do you have any bank /Finance Company debts?</label>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="financeDepts1" name="trader[financeDepts]" class="custom-control-input">
+                            <label class="custom-control-label" for="financeDepts1">Yes</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="financeDepts2" name="trader[financeDepts]" class="custom-control-input">
+                            <label class="custom-control-label" for="financeDepts2">No</label>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom03">If Yes , how much? If No continue with
+                            below question</label>
+                        <input type="text" class="form-control" name="trader[howMuch]" id="validationCustom03" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Autonomous Community can't be left empty
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom03">How would you like to grow your trade?</label>
+                        <input type="text" class="form-control" name="trader[growTrade]" id="validationCustom03" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Autonomous Community can't be left empty
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom05">Do you have young people learning your trade under you?</label>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="learningTrade1" name="trader[learningTrade]" class="custom-control-input">
+                            <label class="custom-control-label" for="learningTrade1">Yes</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="learningTrade2" name="trader[learningTrade]" class="custom-control-input">
+                            <label class="custom-control-label" for="learningTrade2">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom03">If Yes, How many? Will you like to have some more young people, learning from
+                            you?</label>
+                        <input type="text" class="form-control" name="trader[howmanyYoungP]" id="validationCustom03" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Autonomous Community can't be left empty
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom03">How would you like Ebonyi State- Stimulus Development Project (ES-SDP) to help
+                                you?</label>
+                        <input type="text" class="form-control" name="trader[ESSDP]" id="validationCustom03" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Autonomous Community can't be left empty
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                    </label>
+                    <div class="invalid-feedback">
+                        You must agree before submitting.
+                    </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        
+          
+          <script>
+          // Example starter JavaScript for disabling form submissions if there are invalid fields
+          (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+              // Fetch all the forms we want to apply custom Bootstrap validation styles to
+              var forms = document.getElementsByClassName('needs-validation');
+              // Loop over them and prevent submission
+              var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                  if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                  form.classList.add('was-validated');
+                }, false);
+              });
+            }, false);
+          })();
+          </script>
+        </div>
+    </body>
+</html>
