@@ -16,20 +16,21 @@ var PORT =  process.env.PORT || 3000,
 
 
     mongoose.set('useCreateIndex', true);
-    mongoose.connect("mongodb://localhost/government", { useNewUrlParser:true }, function(err){
+
+//     mongoose.connect("mongodb://localhost/government", { useNewUrlParser:true }, function(err){
+//         if(err){
+//             console.log("can't connet to database " + err)
+//             return;
+//         }
+//         console.log("connection locally");
+//     }).catch()
+    mongoose.connect("mongodb://user:slatecubeproject1@ds255403.mlab.com:55403/nodeprojects", { useNewUrlParser:true }, function(err){
         if(err){
             console.log("can't connet to database " + err)
             return;
         }
-        console.log("connection locally");
+        console.log("connection successfull");
     }).catch()
-    // mongoose.connect("mongodb://user:slatecubeproject1@ds255403.mlab.com:55403/nodeprojects", { useNewUrlParser:true }, function(err){
-    //     if(err){
-    //         console.log("can't connet to database " + err)
-    //         return;
-    //     }
-    //     console.log("connection successfull");
-    // }).catch()
 
 var app = express();
 app.set('view engine', 'ejs');
