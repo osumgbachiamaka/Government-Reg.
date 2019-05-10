@@ -1,29 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>
+            <% include partials/header %>
 
-        </title>
-            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-            <link rel="stylesheet" href="../css/bootstrap.min.css">
-            <link rel="stylesheet" href="../css/form.css">
-            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-            <style>
-                @media screen and (max-width: 560px) {
-                    
-                    .contain{
-                        width: 100%;
-                        margin: 0 auto;
-                    }
-                }
-            </style>
-    </head>
-    <body>
-
-        <div class=container-fluid>
+        <div class=container-fluid style="margin-top:100px">
             <div class="contain">
             <div class="biggest ml-auto mr-auto my-4">
             <div class="title text-center">
@@ -266,14 +243,17 @@
                     <div class="col-md-6 mb-3">
                             <label for="validationCustom03">Name of Certification Received, if any?</label>
                             <input type="text" class="form-control" name="Eng[certReceived]" id="validationCustom03" placeholder="Name of Certification Received, if any?" required>
-                    <div class="col-md-4 mb-3">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
                         <label for="validationCustom03">Address of Employer</label>
                         <input type="text" class="form-control" name="Eng[addressEmployer]" id="validationCustom03" placeholder="JAddress of Employer" required>
                         <div class="invalid-feedback">
                             Autonomous Community can't be left empty
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3">
+                    <div class="col-md-6 mb-3">
                         <label for="validationCustom03">Job Title</label>
                         <input type="text" class="form-control" name="Eng[jobTitle]" id="validationCustom03" placeholder="Job Title" required>
                         <div class="invalid-feedback">
@@ -353,6 +333,7 @@
                         <div class="invalid-feedback">
                             Village can't be left empty
                 </div>
+                </div>
                 <div class="form-row">
                     <div class="col-md-6 mb-3">
                         <label for="validationCustom03">Relationship with Referrer</label>
@@ -362,6 +343,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </div>
                 <!-- Business Interest-->
         <div class="biggest ml-auto mr-auto my-4">
@@ -1000,30 +982,10 @@
                     </div>
                     </div>
                 </div>
-                <button class="btn btn-primary" type="submit">Submit</button>
+                <button class="btn but type="submit">Submit</button>
                 </div>
             </form>
         </div>
-          <script>
-          // Example starter JavaScript for disabling form submissions if there are invalid fields
-          (function() {
-            'use strict';
-            window.addEventListener('load', function() {
-              // Fetch all the forms we want to apply custom Bootstrap validation styles to
-              var forms = document.getElementsByClassName('needs-validation');
-              // Loop over them and prevent submission
-              var validation = Array.prototype.filter.call(forms, function(form) {
-                form.addEventListener('submit', function(event) {
-                  if (form.checkValidity() === false) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                  }
-                  form.classList.add('was-validated');
-                }, false);
-              });
-            }, false);
-          })();
-          </script>
+      
         </div>
-    </body>
-</html>
+        <% include partials/footer %>
