@@ -16,6 +16,7 @@ var PORT =  process.env.PORT || 3000,
 
 
     mongoose.set('useCreateIndex', true);
+
 //     mongoose.connect("mongodb://localhost/government", { useNewUrlParser:true }, function(err){
 //         if(err){
 //             console.log("can't connet to database " + err)
