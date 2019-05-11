@@ -1,12 +1,12 @@
 body{
     background-color:#e2e1e0;
 }
-/* .contain{
+.contain{
     width: 60%;
     margin: 0 auto;
-} */
+}
 .biggest{
-    width:60%;
+    width:100%;
     background-color:rgb(43, 121, 61);
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     padding:50px;
