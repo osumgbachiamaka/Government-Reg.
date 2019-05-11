@@ -134,23 +134,24 @@
                             <label class="custom-control-label" for="categories3">Engineers/Technologists</label>
                         </div>
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="categories6" name="govern[categories]" class="custom-control-input" value="Business Interest" onclick="radioselsct2()">
+                            <input type="radio" id="categories6" name="govern[categories]" class="custom-control-input" value="Business Interest" onclick="radioselect()">
                             <label class="custom-control-label" for="categories6">Business Interest</label>
                         </div>
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="categories1" name="govern[categories]" class="custom-control-input" value="Elders seeking for business opportunities" onclick="radioselect2()" >
-                            <label class="custom-control-label" for="categories1">Elders seeking for business opportunities</label>
-                        </div>
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="categories2" name="govern[categories]" class="custom-control-input" value="Teachers">
+                            <input type="radio" id="categories2" name="govern[categories]" class="custom-control-input" value="Teachers" onclick="radioselect()">
                             <label class="custom-control-label" for="categories2">Teachers</label>
                         </div>
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="categories4" name="govern[categories]" class="custom-control-input" value="Medicine">
+                            <input type="radio" id="categories1" name="govern[categories]" class="custom-control-input" value="Elders seeking for business opportunities" onclick="radioselect()" >
+                            <label class="custom-control-label" for="categories1">Elders seeking for business opportunities</label>
+                        </div>
+
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="categories4" name="govern[categories]" class="custom-control-input" value="Medicine" onclick="radioselect()">
                             <label class="custom-control-label" for="categories4">Medicine</label>
                         </div>
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="categories5" name="govern[categories]" class="custom-control-input" value="Traders">
+                            <input type="radio" id="categories5" name="govern[categories]" class="custom-control-input" value="Traders" onclick="radioselect()">
                             <label class="custom-control-label" for="categories5">Traders</label>
                         </div>
 
@@ -494,9 +495,22 @@
                         </div>
                     </div>
                 </div>
+                <div class="form-group">
+                    <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                    </label>
+                    <div class="invalid-feedback">
+                        You must agree before submitting.
+                    </div>
+                    </div>
+                </div>
+                <button class="btn but" type="submit">Submit</button>
+                </div>
             </div>
                 <!--Teachers-->
-                <div class="biggest ml-auto mr-auto my-4" style="display:none;">
+                <div id="teachersid" class="biggest ml-auto mr-auto my-4" style="display:none;">
                     <div class="text-center">
                         <h1>Teachers</h1>
                     </div>
@@ -591,9 +605,22 @@
                         </div>
                     </div>
                 </div> 
+                <div class="form-group">
+                    <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                    </label>
+                    <div class="invalid-feedback">
+                        You must agree before submitting.
+                    </div>
+                    </div>
+                </div>
+                <button class="btn but" type="submit">Submit</button>
+                </div>
             </div>
                 <!--Elders seeking for business opportunities-->
-                <div class="biggest ml-auto mr-auto my-4 d-none">
+                <div id="eldersid" class="biggest ml-auto mr-auto my-4" style="display:none;">
             <div class="text-center">
                 <h1>Elders seeking for business opportunities</h1>
             </div>
@@ -745,9 +772,22 @@
                     </div>
                 </div>
             </div>
+            <div class="form-group">
+                <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                    Agree to terms and conditions
+                </label>
+                <div class="invalid-feedback">
+                    You must agree before submitting.
+                </div>
+                </div>
+            </div>
+            <button class="btn but" type="submit">Submit</button>
+            </div>
         </div>
             <!--Medicine-->
-            <div class="biggest ml-auto mr-auto my-4 d-none">
+            <div id="medicineid" class="biggest ml-auto mr-auto my-4" style="display:none;">
             <div class="text-center">
                 <h1>Medicine</h1>
             </div>
@@ -832,9 +872,22 @@
                     </div>
                 </div>
             </div>
+            <div class="form-group">
+                <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                    Agree to terms and conditions
+                </label>
+                <div class="invalid-feedback">
+                    You must agree before submitting.
+                </div>
+                </div>
+            </div>
+            <button class="btn but" type="submit">Submit</button>
+            </div>
         </div>
             <!--Traders-->
-            <div class="biggest ml-auto mr-auto my-4 d-none">
+            <div id="tradersid" class="biggest ml-auto mr-auto my-4" style="display:none;">
             <div class="text-center">
                 <h1>Traders</h1>
             </div>
