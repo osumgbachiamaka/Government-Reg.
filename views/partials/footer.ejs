@@ -6,13 +6,23 @@
     <script src="js/main.js"></script>
     <script>
     const radioselect=()=>{
-        if
-        (document.getElementById('categories3').checked){
+        if(document.getElementById('categories3').checked){
                 document.getElementById('engineerid').style.display='block';
             }
-            else if
-        (document.getElementById('categories6').checked){
+            else if(document.getElementById('categories6').checked){
                 document.getElementById('businessid').style.display='block';
+            }
+            else if(document.getElementById('categories1').checked){
+                document.getElementById('eldersId').style.display='block';
+            }
+            else if(document.getElementById('categories2').checked){
+                document.getElementById('teachersId').style.display='block';
+            }
+            else if(document.getElementById('categories4').checked){
+                document.getElementById('medicineId').style.display='block';
+            }
+            else if(document.getElementById('categories5').checked){
+                document.getElementById('tradersId').style.display='block';
             }
             else document.getElementById('.').style.display='none';
     }
