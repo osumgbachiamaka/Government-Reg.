@@ -23,7 +23,7 @@
                         Looks good!
                     </div>
                     </div>
-                </div>
+                </div>  
                 <div class="form-row">
                     <div class="col-md-6">
                         <label for="validationCustom02">Last name</label>
@@ -130,16 +130,20 @@
                 <div class="col-md-4 mb-3">
                     <label for="validationCustom05">Categories</label>
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="categories1" name="govern[categories]" class="custom-control-input" value="Elders seeking for business opportunities" >
+                            <input type="radio" id="categories3" name="govern[categories]" class="custom-control-input" value="Engineers/Technologists" onclick="radioselect();">
+                            <label class="custom-control-label" for="categories3">Engineers/Technologists</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="categories6" name="govern[categories]" class="custom-control-input" value="Business Interest" onclick="radioselsct2()">
+                            <label class="custom-control-label" for="categories6">Business Interest</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="categories1" name="govern[categories]" class="custom-control-input" value="Elders seeking for business opportunities" onclick="radioselect2()" >
                             <label class="custom-control-label" for="categories1">Elders seeking for business opportunities</label>
                         </div>
                         <div class="custom-control custom-radio">
                             <input type="radio" id="categories2" name="govern[categories]" class="custom-control-input" value="Teachers">
                             <label class="custom-control-label" for="categories2">Teachers</label>
-                        </div>
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="categories3" name="govern[categories]" class="custom-control-input" value="Engineers/Technologists">
-                            <label class="custom-control-label" for="categories3">Engineers/Technologists</label>
                         </div>
                         <div class="custom-control custom-radio">
                             <input type="radio" id="categories4" name="govern[categories]" class="custom-control-input" value="Medicine">
@@ -149,15 +153,12 @@
                             <input type="radio" id="categories5" name="govern[categories]" class="custom-control-input" value="Traders">
                             <label class="custom-control-label" for="categories5">Traders</label>
                         </div>
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="categories6" name="govern[categories]" class="custom-control-input" value="Business Interest">
-                            <label class="custom-control-label" for="categories6">Business Interest</label>
-                        </div>
+
                     </div>
                 </div>
             </div>     
                 <!--Engineers/Technologists-->
-            <div class="biggest ml-auto mr-auto my-4 d-none">
+            <div id="engineerid" class="biggest ml-auto mr-auto my-4" style="display:none;">
                 <div class="text-center">
                     <h1>Engineers/Technologists</h1>
                 </div>
@@ -344,9 +345,22 @@
                 </div>
             </div>
         </div>
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+                Agree to terms and conditions
+            </label>
+            <div class="invalid-feedback">
+                You must agree before submitting.
+            </div>
+            </div>
+        </div>
+        <button class="btn but" type="submit">Submit</button>
+        </div>
         </div>
                 <!-- Business Interest-->
-        <div class="biggest ml-auto mr-auto my-4">
+        <div id="businessid" class="biggest ml-auto mr-auto my-4" style="display:none;">
                 <div class="text-center">
                     <h1>Business Interest</h1>
                 </div>
@@ -482,7 +496,7 @@
                 </div>
             </div>
                 <!--Teachers-->
-                <div class="biggest ml-auto mr-auto my-4 d-none">
+                <div class="biggest ml-auto mr-auto my-4" style="display:none;">
                     <div class="text-center">
                         <h1>Teachers</h1>
                     </div>
