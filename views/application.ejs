@@ -7,7 +7,6 @@
                 <h1>Ebonyi State Stimulus Development Project</h1>
             </div>
             <form class="needs-validation" action="registrationGovern" method="POST" novalidate>
-            <!-- <form class="needs-validation" action="registrationGovern" method="POST" novalidate> -->
                 <div class="form-row">
                     <div class="col-md-6">
                     <label for="validationCustom01">First name</label>
@@ -94,7 +93,7 @@
                     <div class="col-md-6 mb-3">
                         <label>Upload C.V</label>
                         <div class="custom-file">
-                            <input type="file" style"background-radius:none;" class="form-control custom-file-input" name="govern[cv]" id="validatedCustomFile" required>
+                            <input type="file"  class="form-control custom-file-input" name="govern[cv]" id="validatedCustomFile" required>
                             <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
                             <div class="invalid-feedback">Example invalid custom file feedback</div>
                         </div>
@@ -134,24 +133,23 @@
                             <label class="custom-control-label" for="categories3">Engineers/Technologists</label>
                         </div>
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="categories6" name="govern[categories]" class="custom-control-input" value="Business Interest" onclick="radioselect()">
+                            <input type="radio" id="categories6" name="govern[categories]" class="custom-control-input" value="Business Interest" onclick="radioselsct2()">
                             <label class="custom-control-label" for="categories6">Business Interest</label>
                         </div>
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="categories2" name="govern[categories]" class="custom-control-input" value="Teachers" onclick="radioselect()">
+                            <input type="radio" id="categories1" name="govern[categories]" class="custom-control-input" value="Elders seeking for business opportunities" onclick="radioselect2()" >
+                            <label class="custom-control-label" for="categories1">Elders seeking for business opportunities</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="categories2" name="govern[categories]" class="custom-control-input" value="Teachers">
                             <label class="custom-control-label" for="categories2">Teachers</label>
                         </div>
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="categories1" name="govern[categories]" class="custom-control-input" value="Elders seeking for business opportunities" onclick="radioselect()" >
-                            <label class="custom-control-label" for="categories1">Elders seeking for business opportunities</label>
-                        </div>
-
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="categories4" name="govern[categories]" class="custom-control-input" value="Medicine" onclick="radioselect()">
+                            <input type="radio" id="categories4" name="govern[categories]" class="custom-control-input" value="Medicine">
                             <label class="custom-control-label" for="categories4">Medicine</label>
                         </div>
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="categories5" name="govern[categories]" class="custom-control-input" value="Traders" onclick="radioselect()">
+                            <input type="radio" id="categories5" name="govern[categories]" class="custom-control-input" value="Traders">
                             <label class="custom-control-label" for="categories5">Traders</label>
                         </div>
 
@@ -495,22 +493,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                    <label class="form-check-label" for="invalidCheck">
-                        Agree to terms and conditions
-                    </label>
-                    <div class="invalid-feedback">
-                        You must agree before submitting.
-                    </div>
-                    </div>
-                </div>
-                <button class="btn but" type="submit">Submit</button>
-                </div>
             </div>
                 <!--Teachers-->
-                <div id="teachersid" class="biggest ml-auto mr-auto my-4" style="display:none;">
+                <div class="biggest ml-auto mr-auto my-4" style="display:none;">
                     <div class="text-center">
                         <h1>Teachers</h1>
                     </div>
@@ -605,22 +590,9 @@
                         </div>
                     </div>
                 </div> 
-                <div class="form-group">
-                    <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                    <label class="form-check-label" for="invalidCheck">
-                        Agree to terms and conditions
-                    </label>
-                    <div class="invalid-feedback">
-                        You must agree before submitting.
-                    </div>
-                    </div>
-                </div>
-                <button class="btn but" type="submit">Submit</button>
-                </div>
             </div>
                 <!--Elders seeking for business opportunities-->
-                <div id="eldersid" class="biggest ml-auto mr-auto my-4" style="display:none;">
+                <div class="biggest ml-auto mr-auto my-4 d-none">
             <div class="text-center">
                 <h1>Elders seeking for business opportunities</h1>
             </div>
@@ -787,7 +759,7 @@
             </div>
         </div>
             <!--Medicine-->
-            <div id="medicineid" class="biggest ml-auto mr-auto my-4" style="display:none;">
+            <div class="biggest ml-auto mr-auto my-4 d-none">
             <div class="text-center">
                 <h1>Medicine</h1>
             </div>
@@ -887,7 +859,7 @@
             </div>
         </div>
             <!--Traders-->
-            <div id="tradersid" class="biggest ml-auto mr-auto my-4" style="display:none;">
+            <div class="biggest ml-auto mr-auto my-4 d-none">
             <div class="text-center">
                 <h1>Traders</h1>
             </div>
