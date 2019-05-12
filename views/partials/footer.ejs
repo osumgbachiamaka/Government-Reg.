@@ -8,21 +8,88 @@
     const radioselect=()=>{
         if(document.getElementById('categories3').checked){
                 document.getElementById('engineerid').style.display='block';
+                document.getElementById('businessid').style.display='none';
+                document.getElementById('eldersId').style.display='none';
+                document.getElementById('teachersId').style.display='none';
+                document.getElementById('medicineId').style.display='none';
+                document.getElementById('tradersId').style.display='none';
+
+                document.getElementById('categories1').checked = false;
+                document.getElementById('categories2').checked = false;
+                document.getElementById('categories4').checked = false;
+                document.getElementById('categories5').checked = false;
+                document.getElementById('categories6').checked = false;
             }
             else if(document.getElementById('categories6').checked){
                 document.getElementById('businessid').style.display='block';
+                document.getElementById('engineerid').style.display='none';
+                document.getElementById('eldersId').style.display='none';
+                document.getElementById('teachersId').style.display='none';
+                document.getElementById('medicineId').style.display='none';
+                document.getElementById('tradersId').style.display='none';
+
+                document.getElementById('categories1').checked = false;
+                document.getElementById('categories2').checked = false;
+                document.getElementById('categories3').checked = false;
+                document.getElementById('categories4').checked = false;
+                document.getElementById('categories5').checked = false;
             }
             else if(document.getElementById('categories1').checked){
                 document.getElementById('eldersId').style.display='block';
+                document.getElementById('businessid').style.display='none';
+                document.getElementById('engineerid').style.display='none';
+                document.getElementById('teachersId').style.display='none';
+                document.getElementById('medicineId').style.display='none';
+                document.getElementById('tradersId').style.display='none';
+                
+                document.getElementById('categories6').checked = false;
+                document.getElementById('categories2').checked = false;
+                document.getElementById('categories3').checked = false;
+                document.getElementById('categories4').checked = false;
+                document.getElementById('categories5').checked = false;
+            
             }
             else if(document.getElementById('categories2').checked){
                 document.getElementById('teachersId').style.display='block';
+                document.getElementById('businessid').style.display='none';
+                document.getElementById('eldersId').style.display='none';
+                document.getElementById('engineerid').style.display='none';
+                document.getElementById('medicineId').style.display='none';
+                document.getElementById('tradersId').style.display='none';
+
+                document.getElementById('categories6').checked = false;
+                document.getElementById('categories1').checked = false;
+                document.getElementById('categories3').checked = false;
+                document.getElementById('categories4').checked = false;
+                document.getElementById('categories5').checked = false;
             }
             else if(document.getElementById('categories4').checked){
                 document.getElementById('medicineId').style.display='block';
+                document.getElementById('businessid').style.display='none';
+                document.getElementById('eldersId').style.display='none';
+                document.getElementById('teachersId').style.display='none';
+                document.getElementById('engineerid').style.display='none';
+                document.getElementById('tradersId').style.display='none';
+
+                document.getElementById('categories6').checked = false;
+                document.getElementById('categories1').checked = false;
+                document.getElementById('categories3').checked = false;
+                document.getElementById('categories2').checked = false;
+                document.getElementById('categories5').checked = false;
             }
             else if(document.getElementById('categories5').checked){
                 document.getElementById('tradersId').style.display='block';
+                document.getElementById('businessid').style.display='none';
+                document.getElementById('eldersId').style.display='none';
+                document.getElementById('teachersId').style.display='none';
+                document.getElementById('medicineId').style.display='none';
+                document.getElementById('engineerid').style.display='none';
+                
+                document.getElementById('categories6').checked = false;
+                document.getElementById('categories1').checked = false;
+                document.getElementById('categories3').checked = false;
+                document.getElementById('categories2').checked = false;
+                document.getElementById('categories4').checked = false;
             }
             else document.getElementById('.').style.display='none';
     }

@@ -97,8 +97,10 @@
                     <div class="col-md-6 mb-3">
                         <label>Enter link to C.V hosted on drive</label>
                         <div class="custom-file">
-                            <input type="url" style"background-radius:none;" class="form-control custom-file-input" name="govern[cv]" id="validatedCustomFile" required>
-                            
+                            <input type="text" class="form-control" name="govern[cv]" id="validatedCustomFile" required>
+                            <div class="invalid-feedback">
+                                C.V required
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -322,11 +324,10 @@
                 </div>
                 <div class="form-row">
                     <div class="col-md-6 mb-3">
-                        <label>Do you have any business plan? if yes upload a copy</label>
+                        <label>Do you have any business plan? if yes input link hosted on google drive</label>
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input" name="Eng[businessPlan]" id="validatedCustomFile" >
-                            <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-                            <div class="invalid-feedback">Example invalid custom file feedback</div>
+                            <input type="text" class="custom-file-input" name="Eng[businessPlan]" id="validatedCustomFile" >
+                            <div class="invalid-feedback">Business Plan required</div>
                         </div>
                     </div>
                     <div class="col-md-6 mb-3">
@@ -335,7 +336,8 @@
                         <!-- <input type="text" class="form-control" name="Eng[yourAchievement]" id="validationCustom03" placeholder="" > -->
                         <div class="invalid-feedback">
                             Village can't be left empty
-                </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="form-row">
                     <div class="col-md-6 mb-3">
@@ -343,22 +345,22 @@
                         <input type="text" class="form-control" name="Eng[referralRelationship]" id="validationCustom03">
                             <div class="invalid-feedback">
                                 Autonomous Community can't be left empty
+                            </div>
                     </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
-                <label class="form-check-label" for="invalidCheck">
-                    Agree to terms and conditions
-                </label>
-                <div class="invalid-feedback">
-                    You must agree before submitting.
+                <div class="form-group">
+                    <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
+                    <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                    </label>
+                    <div class="invalid-feedback">
+                        You must agree before submitting.
+                    </div>
+                    </div>
                 </div>
-                </div>
-            </div>
-            <button class="btn but" type="submit">Submit</button>
-        </div>
+                <button class="btn but" type="submit">Submit</button>
+            
         </div>
         </div>
                 <!-- Business Interest-->
@@ -770,6 +772,7 @@
                         Village can't be left empty
                     </div>
                 </div>
+            </div>
                 <div class="form-group">
                     <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
@@ -847,8 +850,8 @@
                 <div class="col-md-6 mb-3">
                     <label>Enter link to license hosted on drive</label>
                     <div class="custom-file">
-                        <input type="url" class="custom-file-input" name="medicine[license]" id="validatedCustomFile" >
-                        <div class="invalid-feedback">Example invalid custom file feedback</div>
+                        <input type="url" class="form-control" name="medicine[license]" id="validatedCustomFile" >
+                        <div class="invalid-feedback">Licensce required</div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">
