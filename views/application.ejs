@@ -28,6 +28,9 @@
                     <div class="col-md-6">
                         <label for="validationCustom02">Last name</label>
                         <input type="text" class="form-control" name="govern[lastname]" id="validationCustom02"  required>
+                        <div class="invalid-feedback">
+                            Fullname required.
+                        </div>
                     </div>
                 </div>
                 <div class="form-row">
@@ -63,7 +66,7 @@
                         <label for="validationCustom03">Phone</label>
                         <input type="number" class="form-control" name="govern[phone]" id="validationCustom03" required>
                         <div class="invalid-feedback">
-                            Please provide a valid date.
+                            Please provide a valid phone number.
                         </div>
                     </div>
                 </div>
@@ -92,11 +95,10 @@
                             </div>
                         </div>
                     <div class="col-md-6 mb-3">
-                        <label>Upload C.V</label>
+                        <label>Enter link to C.V hosted on drive</label>
                         <div class="custom-file">
-                            <input type="file" style"background-radius:none;" class="form-control custom-file-input" name="govern[cv]" id="validatedCustomFile" required>
-                            <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-                            <div class="invalid-feedback">Example invalid custom file feedback</div>
+                            <input type="url" style"background-radius:none;" class="form-control custom-file-input" name="govern[cv]" id="validatedCustomFile" required>
+                            
                         </div>
                     </div>
                 </div>
@@ -612,10 +614,10 @@
                             You must agree before submitting.
                         </div>
                         </div>
-                    </div>
                     <button class="btn but" type="submit">Submit</button>
                 </div> 
             </div>
+        </div>
                 <!--Elders seeking for business opportunities-->
                 <div class="biggest ml-auto mr-auto my-4" id="eldersId" style="display:none">
             <div class="text-center">
@@ -843,10 +845,9 @@
             </div>
             <div class="form-row">
                 <div class="col-md-6 mb-3">
-                    <label>Upload copy of license</label>
+                    <label>Enter link to license hosted on drive</label>
                     <div class="custom-file">
-                        <input type="file" class="custom-file-input" name="medicine[license]" id="validatedCustomFile" >
-                        <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                        <input type="url" class="custom-file-input" name="medicine[license]" id="validatedCustomFile" >
                         <div class="invalid-feedback">Example invalid custom file feedback</div>
                     </div>
                 </div>
